@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Minimal Kod Pratiği</title>
+    <style>
+        /* CSS Başlangıcı */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e; /* Koyu arka plan */
+            color: #d4d4d4; /* Açık metin */
+            margin: 0;
+            padding: 20px;
+        }
+        #editor {
+            width: 95%;
+            height: 400px;
+            background-color: #1e1e1e; /* Koyu editör alanı */
+            color: #d4d4d4;
+            border: 1px solid #3c3c3c;
+            padding: 15px;
+            font-size: 14px;
+            font-family: 'Consolas', 'Courier New', monospace; /* Kod yazı tipi */
+            resize: vertical;
+        }
+        #run-button {
+            background-color: #007acc; /* Mavi tonu */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+        #output {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #000000;
+            border: 1px solid #3c3c3c;
+            min-height: 50px;
+            white-space: pre-wrap; /* Çıktı formatını koru */
+        }
+        /* CSS Sonu */
+    </style>
+</head>
+<body>
+    <h2>Android Kod Pratiği Alanı</h2>
+    <textarea id="editor" placeholder="// Buraya Android kod yapınızı yazarak pratik yapın..."></textarea>
+    <button id="run-button">Çalıştır (Göstermelik)</button>
+    <div id="output">Çıktı Alanı</div>
+
+    <script>
+        // JavaScript Başlangıcı
+        document.getElementById('run-button').addEventListener('click', function() {
+            var code = document.getElementById('editor').value;
+            var output = document.getElementById('output');
+            
+            // Gerçek bir Java/Android kodu çalıştırmak imkansız olduğu için,
+            // sadece yazılan kodu çıktıya yansıtan bir simülasyon yapıyoruz.
+            
+            output.innerHTML = '*** Kodunuz Çalıştırıldı ***\n\n' + code;
+            
+            // Eğer basit 'if' mantığı görmek isterseniz:
+            if (code.includes('if')) {
+                 output.innerHTML += '\n\n>>> Mantık kontrol edildi. Koşullu ifade (if) içeriyor.';
+            } else {
+                 output.innerHTML += '\n\n>>> Herhangi bir koşullu ifade (if) bulunamadı.';
+            }
+        });
+        // JavaScript Sonu
+    </script>
+</body>
+</html>

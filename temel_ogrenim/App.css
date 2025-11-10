@@ -1,0 +1,177 @@
+/*
+alt + shift + f : kodları hizalama demek
+
+ctrl + alt  + aşağı  : imleci satır büyütme
+
+shift  + alt  + aşağı : elementi alt satırı yazma
+
+
+
+YORUM SATIRINA ALMA
+
+html :
+<!--...-->
+
+css :
+
+
+
+
+
+
+
+
+
+
+
+BORDER VE RADİUS ÖZELLİKLERİ 
+
+dotted- Noktalı bir kenarlık tanımlar
+dashed- Kesikli bir kenarlık tanımlar
+solid- Katı bir sınır tanımlar
+double- Çift kenarlığı tanımlar
+groove- 3 boyutlu oluklu bir kenarlık tanımlar. Etkisi border-color değerine bağlıdır
+ridge- 3 boyutlu çıkıntılı bir sınır tanımlar. Etkisi border-color değerine bağlıdır
+inset- 3 boyutlu bir iç kenarlık tanımlar. Etkisi border-color değerine bağlıdır
+outset- 3 boyutlu bir başlangıç ​​sınırını tanımlar. Etkisi border-color değerine bağlıdır
+
+
+
+
+
+
+        TABLO KENARLIK KURALI NOTU:
+        'border-collapse: collapse;' kuralı, hücreler arasındaki çift çizgileri kaldırarak
+        tablonun tüm kenarlıklarını tek ve düz bir çizgi haline getirir.
+  
+
+
+
+margin ve padding kullanım
+
+top  = üst
+bottom = alt
+left = sol
+right = sağ
+
+
+Text ve Font Özellikleri
+
+1- color → Yazının rengini belirler.
+Örnek: color: red;
+
+2- background-color → Öğenin arka plan rengini belirler.
+Örnek: background-color: yellow;
+
+3- text-align → Metni yatayda hizalamaya yarar.
+Değerler: left, center, right, justify
+Örnek: text-align: center;
+
+4- font-weight → Yazının kalınlığını ayarlar.
+Değerler: normal, bold, lighter, 100–900
+Örnek: font-weight: bold;
+
+5- font-family → Yazı tipini belirler.
+Örnek: font-family: Arial, sans-serif;
+
+6- font-style → Yazının stilini belirler.
+Değerler: normal, italic, oblique
+Örnek: font-style: italic;
+
+7- text-transform → Harflerin büyük-küçük dönüşümünü sağlar.
+Değerler: uppercase, lowercase, capitalize
+Örnek: text-transform: uppercase;
+
+8- letter-spacing → Harfler arasındaki boşluğu ayarlar.
+Örnek: letter-spacing: 2px;
+
+9- text-decoration → Yazının süslemelerini belirler.
+Değerler: none, underline, line-through, overline
+Örnek: text-decoration: underline;
+
+
+10- word-spacing → Kelimeler arasındaki boşluğu belirler.
+Örnek: word-spacing: 10px;
+
+
+
+
+
+
+*/
+
+/*SEÇİCİLER KULANIM TÜRLERİ*/
+
+/* 1. Etiket seçicisi */
+p {
+  color: blue;
+}
+
+/* 2. Class seçicisi */
+.bolum {
+  background-color: lightgray;
+}
+
+/* 3. ID seçicisi */
+#ozelBaslik {
+  font-size: 24px;
+}
+
+/* 4. Child seçici (doğrudan çocuk) */
+.icerik > div {
+  padding: 10px;
+}
+
+/* 5. Descendant seçici (torun dahil) */
+.kapsayici p {
+  font-style: italic;
+}
+
+/* 6. Attribute (özellik) seçicisi */
+input[type="text"] {
+  border: 1px solid gray;
+}
+
+/* 7. Pseudo-class (durum) seçicisi */
+a:hover {
+  color: red;
+}
+
+/* 8. Pseudo-element (öğe parçası) seçicisi */
+p::first-line {
+  font-weight: bold;
+}
+
+
+/*LİNK ÖZELLİKLERİ
+
+ör;
+
+a:link     = ilk halidir
+
+a:hover     = üzerine gelindikten sonra ki durum
+
+a:active     = linkin üzerine tıklandıktan sonra ki durum
+
+a:visited     = site ziyaret  edildikten sonra ki durum
+
+
+
+
+LİSTE ÖZELLİKLERİ
+
+
+list-style-type    =   listenin başında ki noktayı kaldırıyor
+
+
+
+justify-content ve align-items   farkı
+
+justify-content: Ana eksendeki (varsayılan olarak yatay) hizalamayı kontrol eder. Menü elemanlarını solda,
+sağda veya ortada hizalamak için kullanılır.
+
+align-items: Yan eksendeki (varsayılan olarak dikey) hizalamayı kontrol eder. Menü elemanlarını
+yukarıda, aşağıda veya ortada hizalamak için kullanılır.
+
+
+

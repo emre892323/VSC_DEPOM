@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sadece Audio Etiketi Örneği</title>
+    <link rel="icon" type="image/png" href="Resim_Dosyaları/muzik_logo.png">
+    <style>
+        body {
+            background-color: rgb(206, 114, 8);
+            color: #ffff;
+            text-align: center;
+            line-height: 50px;
+            word-spacing: 5px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        #lockLink{
+            color: #ffff;
+            font-size: x-large;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Audio Etiketi Kullanımı</h1>
+    <p>Modern tarayıcılarda, sesin otomatik çalması engellenmiştir. Sesin çalması için aşağıdaki kontrolleri kullanın (JAVA SCRİPT) <a
+            id="lockLink" href="#">Tıkla</a>.
+    </p>
+
+    <audio id="audioPlayer" loop>
+        <source src="Muzik_Dosyalari/Yaşlı Amca - İstanbul Beyefendisi.mp3" type="audio/mp3">
+        <source src="Muzik_Dosyalari/Yaşlı Amca - İstanbul Beyefendisi.mp3" type="audio/ogg">
+        Tarayıcınız audio etiketini desteklemiyor.
+    </audio>
+
+    <a href="#">
+    </a>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // 1. Audio ve Link elementlerini yakala
+            const muzikOynatici = document.getElementById('audioPlayer');
+            const baslatLinki = document.getElementById('lockLink');
+
+            // 2. Linke tıklama olayını dinle
+            baslatLinki.addEventListener('click', function (e) {
+                e.preventDefault(); // Sayfanın yenilenmesini engelle
+
+                // 3. Şarkıyı çal
+                muzikOynatici.play()
+                    .then(() => {
+                        console.log("Müzik başarıyla başladı.");
+                        // İsteğe bağlı: Başlatıldıktan sonra linkin yazısını değiştirebiliriz.
+                        baslatLinki.textContent = "Müzik Çalıyor (Tıklandı)";
+                    })
+                    .catch(error => {
+                        // Hata yakalama: Tarayıcı izin vermediğinde burası çalışır.
+                        console.error("Müzik çalma başarısız oldu:", error);
+                    });
+            });
+        });
+    </script>
+</body>
+
+</html>

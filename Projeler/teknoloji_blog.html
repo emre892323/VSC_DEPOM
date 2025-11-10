@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head><!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8N7V06D3FD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-8N7V06D3FD');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teknoloji Blogger</title>
+    <link rel="icon" type="image/png" href="resimler/İcon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Genel Ayarlar */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e9ebee;
+            /* Açık gri arka plan */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            /* İçeriği yan yana düzenlemek için */
+            flex-wrap: wrap;
+            /* Küçük ekranlarda alt alta gelmesi için */
+        }
+
+        /* Başlık Alanı */
+        header {
+            background-color: #283747;
+            /* Koyu lacivert */
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            letter-spacing: 1px;
+        }
+
+        header nav {
+            margin-top: 10px;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 20px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #5dade2;
+            /* Açık mavi */
+        }
+
+        /* Ana İçerik Alanı (Blog Yazıları) */
+        main {
+            flex: 3;
+            /* Yan menüye göre daha geniş */
+            padding-right: 20px;
+        }
+
+        .blog-post {
+            background-color: #fdfdfd;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        .blog-post h2 {
+            color: #283747;
+            font-size: 2rem;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .blog-post .meta {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 15px;
+        }
+
+        .blog-post .meta a {
+            color: #5dade2;
+            text-decoration: none;
+        }
+
+        .blog-post p {
+            margin-bottom: 15px;
+        }
+
+        .blog-post a.read-more {
+            display: inline-block;
+            background-color: #5dade2;
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .blog-post a.read-more:hover {
+            background-color: #3498db;
+        }
+
+        /* Yan Menü Alanı */
+        aside {
+            flex: 1;
+            /* Ana içeriğe göre daha dar */
+            padding-left: 20px;
+            border-left: 1px solid #eee;
+            /* Ayırıcı çizgi */
+        }
+
+        aside .widget {
+            background-color: #fdfdfd;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        aside .widget h3 {
+            color: #283747;
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        aside .widget ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        aside .widget ul li {
+            margin-bottom: 8px;
+        }
+
+        aside .widget ul li a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        aside .widget ul li a:hover {
+            color: #5dade2;
+        }
+
+        /* Alt Bilgi Alanı */
+        footer {
+            background-color: #283747;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 30px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Tasarım */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                /* Küçük ekranlarda alt alta gelsinler */
+                padding: 10px;
+            }
+
+            main {
+                padding-right: 0;
+                margin-bottom: 20px;
+            }
+
+            aside {
+                padding-left: 0;
+                border-left: none;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header nav a {
+                padding: 0 10px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Teknoloji Blogger</h1>
+        <nav>
+            <a href="teknoloji_blog.html">Anasayfa</a>
+            <a href="#">Kategoriler</a>
+            <a href="#">Hakkımda</a>
+            <a href="iletisim.html" target="_blank">İletişim</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main>
+            <section class="blog-post">
+                <h2>İlk Blog Yazım: Web Geliştirmeye Başlangıç</h2>
+                <p class="meta">Yazar: Emre | Tarih: 15 Eylül 2025 | Kategori: <a href="#">Web Geliştirme</a></p>
+                <p>
+                    Web geliştirme dünyasına adım atmak, heyecan verici ve bir o kadar da öğrenme dolu bir süreçtir.
+                    HTML ve CSS ile başlayan bu yolculuk, web sitelerinin iskeletini ve görünümünü oluşturmayı
+                    öğrenmekle başlar. İlk başlarda karmaşık gibi görünse de, pratik yaparak her şeyin yerine oturduğunu
+                    göreceksiniz.
+                </p>
+                <a href="#" class="read-more">Devamını Oku</a>
+            </section>
+
+            <section class="blog-post">
+                <h2>Hosting ve Domain: Web Sitenizin Temelleri</h2>
+                <p class="meta">Yazar: Emre | Tarih: 12 Nisan 2025 | Kategori: <a href="#">Hosting</a></p>
+                <p>
+                    Bir web sitesinin internette var olabilmesi için olmazsa olmaz iki temel kavram vardır: Hosting ve
+                    Domain. Domain, web sitenizin internetteki adıdır; hosting ise sitenizin tüm dosyalarını barındıran
+                    sunucu hizmetidir. Bu iki unsur, sitenizin çevrimiçi ortamda erişilebilir olmasını sağlar.
+                </p>
+                <a href="#" class="read-more">Devamını Oku</a>
+            </section>
+
+        </main>
+
+        <aside>
+            <div class="widget">
+                <h3>Hakkımda</h3>
+                <p>Merhaba! Ben **[Adın Buraya Gelecek]**. Web geliştirme öğrenen hevesli bir öğrenciyim. Bu blogda
+                    öğrendiklerimi ve deneyimlerimi paylaşıyorum.</p>
+            </div>
+
+            <div class="widget">
+                <h3>Popüler Kategoriler</h3>
+                <ul>
+                    <li><a href="#">Web Geliştirme</a></li>
+                    <li><a href="#">Front-end</a></li>
+                    <li><a href="#">Back-end</a></li>
+                    <li><a href="#">Hosting & Domain</a></li>
+                    <li><a href="#">Projelerim</a></li>
+                </ul>
+            </div>
+
+            <div class="widget">
+                <h3>Son Yazılar</h3>
+                <ul>
+                    <li><a href="#">CSS Flexbox ile Düzen Oluşturma</a></li>
+                    <li><a href="#">JavaScript'e Giriş</a></li>
+                    <li><a href="#">İlk Web Sitemi Yayınladım!</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Benim Blog Sitem. Tüm Hakları Saklıdır.</p>
+    </footer>
+</body>
+
+</html>

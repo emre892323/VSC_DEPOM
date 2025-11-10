@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Tüm CSS Cursor Örnekleri</title>
+    <style>
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            padding: 20px;
+        }
+
+        /* Önceki tasarıma uygun stil */
+        p {
+            border: 2px solid black; /* Önceki tasarımdaki gibi kalın kenarlık */
+            padding: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+            line-height: 25px;
+            background-color: rgb(233, 233, 233); /* Hafif gri arka plan */
+            transition: all 0.3s ease; 
+            font-size: large;
+        }
+
+        p:hover {
+            background-color: rgb(88, 88, 88);
+            color: white;
+        }
+        
+        /* TÜM Cursor Değerleri */
+        .auto { cursor: auto; }
+        .default { cursor: default; }
+        .none { cursor: none; }
+        .context-menu { cursor: context-menu; }
+        .help { cursor: help; }
+        .pointer { cursor: pointer; }
+        .progress { cursor: progress; }
+        .wait { cursor: wait; }
+        .cell { cursor: cell; }
+        .crosshair { cursor: crosshair; }
+        .text { cursor: text; }
+        .vertical-text { cursor: vertical-text; }
+        .alias { cursor: alias; }
+        .copy { cursor: copy; }
+        .move { cursor: move; }
+        .no-drop { cursor: no-drop; }
+        .not-allowed { cursor: not-allowed; }
+        .grab { cursor: grab; }
+        .grabbing { cursor: grabbing; }
+        .all-scroll { cursor: all-scroll; }
+        
+        /* Yeniden Boyutlandırma (Resize) İmleçleri */
+        .col-resize { cursor: col-resize; }
+        .row-resize { cursor: row-resize; }
+        .n-resize { cursor: n-resize; }
+        .e-resize { cursor: e-resize; }
+        .s-resize { cursor: s-resize; }
+        .w-resize { cursor: w-resize; }
+        .ne-resize { cursor: ne-resize; }
+        .nw-resize { cursor: nw-resize; }
+        .se-resize { cursor: se-resize; }
+        .sw-resize { cursor: sw-resize; }
+        .ew-resize { cursor: ew-resize; }
+        .ns-resize { cursor: ns-resize; }
+        .nesw-resize { cursor: nesw-resize; }
+        .nwse-resize { cursor: nwse-resize; }
+        .zoom-in { cursor: zoom-in; }
+        .zoom-out { cursor: zoom-out; }
+
+    </style>
+</head>
+<body>
+
+    <p class="auto">cursor: auto</p>
+    <p class="default">cursor: default</p>
+    <p class="pointer">cursor: pointer (Tıklanabilir bir element)</p>
+    <p class="help">cursor: help (Yardım bilgisi mevcut)</p>
+    <p class="text">cursor: text (Metin seçilebilir)</p>
+    <p class="move">cursor: move (Her yöne hareket ettirilebilir)</p>
+    <p class="grab">cursor: grab (Element tutulabilir)</p>
+    <p class="grabbing">cursor: grabbing (Element aktif olarak tutuluyor)</p>
+    <p class="copy">cursor: copy (Kopyalanabilir bir öğe)</p>
+    <p class="alias">cursor: alias (Kısayol oluşturulabilir)</p>
+    <p class="progress">cursor: progress (Arka planda işlem devam ediyor)</p>
+    <p class="wait">cursor: wait (Tarayıcı meşgul, bekleme gerekli)</p>
+    <p class="not-allowed">cursor: not-allowed (İşlem yasak)</p>
+    <p class="no-drop">cursor: no-drop (Sürüklenen öğe buraya bırakılamaz)</p>
+    <p class="cell">cursor: cell (Tablo hücresi seçimi)</p>
+    <p class="crosshair">cursor: crosshair (Grafik çizim veya seçim)</p>
+    <p class="all-scroll">cursor: all-scroll (Tüm yönlere kaydırılabilir)</p>
+    <p class="context-menu">cursor: context-menu (Sağ tık menüsü mevcut)</p>
+    <p class="vertical-text">cursor: vertical-text (Dikey metin seçimi)</p>
+    <p class="col-resize">cursor: col-resize (Sütun boyutlandırma - Yatay)</p>
+    <p class="row-resize">cursor: row-resize (Satır boyutlandırma - Dikey)</p>
+    <p class="ew-resize">cursor: ew-resize (Doğu-Batı, yatay boyutlandırma)</p>
+    <p class="ns-resize">cursor: ns-resize (Kuzey-Güney, dikey boyutlandırma)</p>
+    <p class="ne-resize">cursor: ne-resize (Kuzeydoğu/Sağ üst boyutlandırma)</p>
+    <p class="sw-resize">cursor: sw-resize (Güneybatı/Sol alt boyutlandırma)</p>
+    <p class="nwse-resize">cursor: nwse-resize (Kuzeybatı-Güneydoğu çapraz boyutlandırma)</p>
+    <p class="nesw-resize">cursor: nesw-resize (Kuzeydoğu-Güneybatı çapraz boyutlandırma)</p>
+    <p class="zoom-in">cursor: zoom-in (Yakınlaştırma mümkün)</p>
+    <p class="zoom-out">cursor: zoom-out (Uzaklaştırma mümkün)</p>
+    <p class="none">cursor: none (İmleci gizler - Dikkatli kullanın)</p>
+    
+</body>
+</html>

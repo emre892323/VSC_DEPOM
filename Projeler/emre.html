@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head><!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8N7V06D3FD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-8N7V06D3FD');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emre'nin Sayfası</title>
+    <link rel="stylesheet" href="emre.css">  <!--düzenlerken css dosyasını yoruma al    -->
+    <style>
+        .container{
+            display: flex;
+            height: 300px;
+            width: 300px;
+            background-color: rgb(0, 217, 255);
+            align-items: center;
+            justify-content: center;
+            cursor: progress;
+   
+            animation-name: renkDegisimi;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+
+
+            border-radius: 50%;
+            border: 10px solid #f3f3f3;
+            border-top: 5px solid #4a788e;
+            animation: spin 5s linear infinite ;
+            /*
+            transform-style: preserve-3d;
+            transition: transform 1s;
+            animation: flip 4s ease-in-out infinite alternate;
+            */
+        }
+        @keyframes renkDegisimi{
+            0%{
+                transform:translateX(0px)
+            }
+            100%{
+                transform:translateX(200px)
+            }
+                
+
+           
+            
+
+ 
+       
+        }
+        @keyframes flip{
+            0%{
+                transform: rotateY(0deg);
+            }
+            100%{
+                transform: rotateY(180deg) ;
+            }
+        }
+       
+        @keyframes spin{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+       .abc{
+            height: 100vh; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container h1{
+            animation-name: sabit;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes sabit{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(-360deg);
+            }
+        }
+   /*     .container h1:hover{
+            
+            animation-name: parlama;
+            animation-duration: 2s;
+            animation-iteration-count:initial;
+            animation-direction: alternate;
+        }
+        @keyframes parlama{
+            0%{
+                text-shadow: 0 0 5px rgb(208, 255, 0);
+            }
+            100%{
+                text-shadow:  0 100px rgb(255, 0, 0);
+            }        
+        }
+            */
+
+
+        
+    </style>
+</head>
+<body class="abc">
+    <div class="container">
+        <h1>Yükleniyor...</h1>
+    </div>
+</body>
+</html>

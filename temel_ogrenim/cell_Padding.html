@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cellpadding Örneği (ESKİ YÖNTEM)</title>
+    <style>
+        /* Sadece kenarlıkları belirgin yapmak için temel CSS */
+        table, th, td {
+            border: 1px solid #333;
+        }
+        table {
+            border-collapse: collapse; /* Kenarlıkların birleşmesi için */
+            width: 50%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Cellpadding Örneği (HTML Özelliği)</h2>
+    <p style="color: red; font-weight: bold;">UYARI: Bu yöntem artık kullanılmamalıdır. Yerine CSS padding kullanılır.</p>
+
+    <table cellpadding="15">
+        <tr>
+            <th>Özellik</th>
+            <th>Açıklama</th>
+        </tr>
+        <tr>
+            <td>cellpadding="15"</td>
+            <td>Bu hücrenin içeriği, kenarlardan 15px uzaktadır.</td>
+        </tr>
+        <tr>
+            <td>Veri 2</td>
+            <td>Veri 3</td>
+        </tr>
+    </table>
+
+    <h3>Karşılaştırma (cellpadding olmadan):</h3>
+
+    <table cellpadding="0">
+        <tr>
+            <th>Özellik</th>
+            <th>Açıklama</th>
+        </tr>
+        <tr>
+            <td>cellpadding="0"</td>
+            <td>Bu hücrenin içeriği kenarlara yapışıktır.</td>
+        </tr>
+        <tr>
+            <td>Veri 2</td>
+            <td>Veri 3</td>
+        </tr>
+    </table>
+
+</body>
+</html>

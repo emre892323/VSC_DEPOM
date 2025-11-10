@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piksel Frekans</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .main-header {
+            display: flex;
+            /* Ana elemanları yan yana diz */
+            justify-content: space-between;
+            /* Kenarlara yasla ve aradaki boşluğu paylaştır */
+            align-items: center;
+            /* Dikeyde ortala */
+            padding: 10px 20px;
+            background-color: #333;
+            /* Koyu arka plan */
+            color: white;
+            /* Beyaz metin */
+        }
+
+        /* Navigasyon menüsünü yatay yap */
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-family:cursive;
+        }
+
+        .main-nav li a {
+            color: white;
+            text-decoration: none;
+            padding: 0 15px;
+            /* Menü elemanları arasına boşluk */
+            font-size: 1.1em;
+        }
+
+        /* Şimdilik sadece mobil menü butonunu gizle */
+        .menu-toggle {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="logo-area">
+            <h1 style="font-family: cursive;">Piksel Frekans</h1>
+        </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#" translate="no">Ana Sayfa</a></li>
+                <li><a href="#">Mobil</a></li>
+                <li><a href="#">Yazılım</a></li>
+                <li><a href="#">Yapay Zeka</a></li>
+                <li><a href="#">Girişim</a></li>
+            </ul>
+        </nav>
+
+        <div class="utility-area">
+            <button class="search-btn">🔍</button>
+            <button class="menu-toggle">☰</button>
+        </div>
+    </header>
+</body>
+
+</html>

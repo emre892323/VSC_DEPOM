@@ -1,0 +1,93 @@
+  h2 {
+      background-color: burlywood;
+      height: 100px;
+      color: purple;
+      line-height: 100px;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 20px;
+      border-radius: 0% 0% 50% 50%;
+  }
+
+  .container {
+
+      width: 100%;
+      margin: 0px auto;
+
+  }
+
+  .daire {
+      height: 300px;
+      width: 300px;
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      transition: all 5s ease;
+      margin: 0 auto;
+  }
+
+  .daire:hover {
+      transform: rotate(720deg);
+      cursor: pointer;
+  }
+
+  .parca {
+      height: 150px;
+      width: 150px;
+  }
+
+  .sol {
+      background-color: black;
+      border-radius: 100% 0% 0% 0%;
+  }
+
+  .sag {
+      background-color: red;
+      border-radius: 0% 100% 0% 0%;
+  }
+
+  .alt_sag {
+      background-color: yellow;
+      border-radius: 0% 0% 100% 0%;
+  }
+
+  .alt_sol {
+      background-color: purple;
+      border-radius: 0% 0% 0% 100%;
+  }
+
+  .cark {
+      height: 50px;
+      width: 50px;
+      background-color: blue;
+      border-radius: 100%;
+      position: absolute;
+      top: calc(50% - 25px);
+      left: calc(50% - 25px);
+  }
+
+  .cark1 {
+      height: 25px;
+      width: 25px;
+      background-color: white;
+      border-radius: 100%;
+      position: absolute;
+      top: calc(50% - 12.5px);
+      left: calc(50% - 12.5px);
+  }
+
+  .mesaj p{
+   
+    text-align: center;
+    font-size: 40px;
+    line-height: 65px;
+  }
+
+  .mesaj{
+    height: 70px;
+    width: 500px;
+    background-color: rgb(128, 128, 128);
+    margin: 0px auto;
+    border-radius: 15px;
+    cursor: pointer;
+  }

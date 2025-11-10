@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ders Programı</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-bottom: 25px;
+        }
+
+        table tr td:hover {
+            background-color: rgb(234, 0, 255);
+            color: #ffff;
+        }
+
+
+        table,
+        th,
+        tr,
+        td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+
+        caption {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+
+        }
+
+
+        .info-container {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            margin: 0 0 15px 0;
+            font-weight: bold;
+        }
+
+
+
+        .imza-satiri {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            font-weight: bold;
+        }
+
+        .imza-satiri p {
+            margin: 0;
+            padding: 0;
+            text-align: right;
+        }
+
+        .alt_bilgi {
+            width: 100%;
+            height: 50px;
+            background-color: rgb(12, 182, 83);
+            margin-top: 10px;
+            text-align: center;
+            line-height: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+            word-spacing: 15px;
+        }
+
+        #emre:hover {
+            cursor: pointer;
+            background-color: rgb(0, 0, 0);
+            color: lightblue;
+            font-size: xx-large;
+            border-radius: 25px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <table>
+        <caption style="margin-bottom: 5px;">TC. <br> ESENYURT İLÇE MİLLİ EĞİTİM MÜDÜRLÜĞÜ <br> ALİ KUŞÇU MESLEKİ VE
+            TEKNİK ANADOLU LİSESİ</caption>
+    </table>
+
+    <div class="info-container">
+        <span>Sınıf : 11A BL</span>
+        <span>Toplam Ders Saati: 45</span>
+        <span>Sınıf Öğretmeni : DİLEK KILIÇ</span>
+    </div>
+
+    <table>
+        <tr>
+            <td> Saat<sup>Ders/Gün</sup></td>
+            <td>(1)<br>08:55<br>09:35</td>
+            <td>(2)<br>09:45<br>10:25</td>
+            <td>(3)<br>10:35<br>11:15</td>
+            <td>(4)<br>11:25<br>12:05</td>
+            <td>(5)<br>12:45<br>13:25</td>
+            <td>(6)<br>13:35<br>14:15</td>
+            <td>(7)<br>14:25<br>15:05</td>
+            <td>(8)<br>15:15<br>15:55</td>
+            <td>(9)<br>16:05<br>16:45</td>
+            <td>(10)<br>16:55<br>17:35</td>
+        </tr>
+        <tr>
+            <td>Pazartesi</td>
+            <td>W.U.G <br>F.ÖZT</td>
+            <td>W.U.G <br>F.ÖZT</td>
+            <td>W.U.G <br>F.ÖZT</td>
+            <td>W.U.G <br>F.ÖZT</td>
+            <td>W.U.G <br>F.ÖZT</td>
+            <td>W.U.G <br>F.ÖZT</td>
+            <td>W.U.G <br>F.ÖZT</td>
+            <td>W.U.G <br>F.ÖZT</td>
+            <td>T.EDE4 <br>U.KÇK</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Salı</td>
+            <td>DİN <br>C.ÇKM</td>
+            <td>DİN <br>C.ÇKM</td>
+            <td>S.SM <br>A.ALK</td>
+            <td>S.FBU <br>G.BİYO</td>
+            <td>S.FBU <br>G.BİYO</td>
+            <td>S.TMAT <br>B.YZC</td>
+            <td>S.TMAT <br>B.YZC</td>
+            <td>SAĞ <br>U.AYK</td>
+            <td>REH <br>D.KLÇ</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Çarşamba</td>
+            <td>BED <br>A.DĞN</td>
+            <td>BED <br>A.DĞN</td>
+            <td>G.C <br>V.KHR</td>
+            <td>G.C <br>V.KHR</td>
+            <td>G.C <br>V.KHR</td>
+            <td>G.C <br>V.KHR</td>
+            <td>PRJ T <br>A.VRL</td>
+            <td>S.SE2 <br>B.GNÇ</td>
+            <td>S.SE2 <br>B.GNÇ</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Perşembe</td>
+            <td>M.UY. <br>F.ÖZT</td>
+            <td>M.UY. <br>F.ÖZT</td>
+            <td>M.UY. <br>F.ÖZT</td>
+            <td>M.UY. <br>F.ÖZT</td>
+            <td>M.UY. <br>F.ÖZT</td>
+            <td>S.SM <br>A.ALK</td>
+            <td>T.EDE4 <br>U.KÇK</td>
+            <td>Y.DİL2 <br>K.ÇVŞ</td>
+            <td>Y.DİL2 <br>K.ÇVŞ</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Cuma</td>
+            <td>T.EDE4 <br>U.KÇK</td>
+            <td>T.EDE4 <br>U.KÇK</td>
+            <td>S.MTUY <br>B.YZC</td>
+            <td>S.MTUY <br>B.YZC</td>
+            <td>PRJ T <br>A.VRL</td>
+            <td>TARİH <br>D.ÇKR</td>
+            <td>TARİH <br>D.ÇKR</td>
+            <td>FEL <br>S.ÇKR</td>
+            <td>FEL <br>S.ÇKR</td>
+            <td></td>
+        </tr>
+    </table>
+
+    <div class="imza-satiri">
+        <p>Yukarıdaki dersler 20/09/2025 tarihinde verilmiştir. Bilgilerinizi rica ederim</p>
+        <p style="text-align: right;"> NAMIK KAYA <br> Okul Müdürü </p>
+    </div>
+    <table>
+        <tr>
+            <th>S.No</th>
+            <th>Ders</th>
+            <th>Dersin Adı</th>
+            <th>Hs</th>
+            <th>Yer</th>
+            <th>Dersin Öğretmeni</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>BED</td>
+            <td>BEDEN EĞİTİMİ VE SPOR</td>
+            <td>2</td>
+            <td></td>
+            <td>AYKUT DOĞAN</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>DİN</td>
+            <td>DİN KÜLTÜRÜ VE AHLAK BİLGİSİ</td>
+            <td>2</td>
+            <td></td>
+            <td>CEMAL ÇAKMAKÇI</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>FEL</td>
+            <td>FELSEFE</td>
+            <td>2</td>
+            <td></td>
+            <td>SEVGİL ÇAKIR</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>G.C</td>
+            <td>GRAFİK VE CANLANDIRMA</td>
+            <td>4</td>
+            <td></td>
+            <td>SEMA ZEYNEP YAVUZ, VİJDAN KAHRAMAN</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>M.UY.</td>
+            <td>MOBİL UYGULAMALAR</td>
+            <td>5</td>
+            <td></td>
+            <td>FATMA ÖZTEKİN</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>PRJ T</td>
+            <td>PROJE TASARIMI VE UYGULAMALARI</td>
+            <td>2</td>
+            <td></td>
+            <td>ASENA VURAL</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>REH</td>
+            <td>REHBERLİK VE YÖNLENDİRME</td>
+            <td>1</td>
+            <td></td>
+            <td>DİLEK KILIÇ</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>S MTUY</td>
+            <td>SEÇMELİ MATEMATİK UYGULAMALARI</td>
+            <td>2</td>
+            <td></td>
+            <td>BAYRAM YAZICI</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>S. SM</td>
+            <td>SEÇMELİ SOSYAL MEDYA</td>
+            <td>2</td>
+            <td></td>
+            <td>AYŞE ALKAN</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>S.FBU</td>
+            <td>SEÇMELİ FEN BİLİMLERİ UYGULAMALARI</td>
+            <td>2</td>
+            <td></td>
+            <td>GÖREVLENDİRME</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>S.SE2</td>
+            <td>SEÇ. SANAT EĞİTİMİ</td>
+            <td>2</td>
+            <td></td>
+            <td>BURCU GENÇAY</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>S.TMAT</td>
+            <td>SEÇMELİ TEMEL MATEMATİK</td>
+            <td>2</td>
+            <td></td>
+            <td>BAYRAM YAZICI</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>SAĞ</td>
+            <td>SAĞLIK BİLGİSİ VE TRAFİK KÜLTÜRÜ</td>
+            <td>1</td>
+            <td></td>
+            <td>UFUK AYKOL</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>T.EDE4</td>
+            <td>TÜRK DİLİ VE EDEBİYATI</td>
+            <td>4</td>
+            <td></td>
+            <td>UĞUR KÜÇÜK</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>TARİH</td>
+            <td>TARİH</td>
+            <td>2</td>
+            <td></td>
+            <td>DİLEK ÇAKIR</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>W.U.G</td>
+            <td>WEB TABANLI UYGULAMA GELİŞTİRME</td>
+            <td>8</td>
+            <td></td>
+            <td>DİLEK KILIÇ, FATMA ÖZTEKİN</td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td>Y.DİL2</td>
+            <td>YABANCI DİL</td>
+            <td>2</td>
+            <td></td>
+            <td>KADER ÇAVUŞ</td>
+        </tr>
+    </table>
+    <footer class="alt_bilgi">
+        <p> Bu Tablo <b id="emre">Emre Küçük</b> Tarafından Hazırlanmıştır.</p>
+    </footer>
+
+</body>
+
+</html>

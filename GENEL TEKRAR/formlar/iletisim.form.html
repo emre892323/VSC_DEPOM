@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim</title>
+    <style>
+        body {
+            background-color: #121212;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+        }
+
+        form {
+            background-color: rgb(51, 51, 51);
+            height: 550px;
+            width: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 35px;
+            border-radius: 25px;
+        }
+
+        label {
+            color: #ffff;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 120px;
+        }
+
+        .formsatiri {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 80%;
+        }
+
+        .baslik {
+            color: #ffff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type=email],
+        input[type=password] {
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid transparent;
+            flex-grow: 1;
+            transition: border-color 0.3;
+        }
+
+        input[type="text"],
+        input[type=email],
+        input[type=password] {
+            border: none;
+        }
+
+        input[type="password"]:focus {
+            border-color: blue;
+            outline: none;
+        }
+
+        ::placeholder {
+            color: rgb(24, 29, 70);
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold
+        }
+
+        .button {
+            padding: 10px 50px 10px 50px;
+            background-color: aquamarine;
+            border: none;
+            border-radius: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <h1 class="baslik">ÜYELİK İŞLEMLERİ</h1>
+
+        <div class="formsatiri">
+            <label for="name">Adınız:</label>
+            <input type="text" id="name" placeholder="Adınızı Girin" required>
+        </div>
+
+        <div class="formsatiri">
+            <label for="surname">Soyadınız</label>
+            <input type="text" id="surname" placeholder="Soyadınızı Girin" required>
+        </div>
+
+        <div class="formsatiri">
+            <label for="username">kullanıcı Adı:</label>
+            <input type="text" id="username" placeholder="Kullanıcı Adı Girin" required>
+        </div>
+
+        <div class="formsatiri">
+            <label for="mail">e-posta Giriniz</label>
+            <input type="email" id="mail" placeholder="E-posta Girin" required>
+        </div>
+
+        <div class="formsatiri">
+            <label for="password">şifre Giriniz:</label>
+            <input type="password" id="password" placeholder="Şifrenizi girin" required minlength="8">
+        </div>
+
+
+        <input type="submit" value="Gönder" class="button" onclick="alert('Üyelik bilgileriniz Onaylandı')">
+
+    </form>
+
+</body>
+
+</html>

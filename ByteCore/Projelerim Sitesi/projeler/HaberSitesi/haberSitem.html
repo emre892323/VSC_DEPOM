@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haberler</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu {
+            background-color: rgb(255, 26, 26);
+            display: flex;
+        }
+
+        .menu ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 50px;
+            gap: 30px;
+
+        }
+
+        .menu ul li {
+            list-style: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+
+        .menu ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+
+        .icerik {
+            height: 400px;
+            width: 900px;
+            background-color: blue;
+            margin-top: 30px;
+            margin-left: 50px;
+            color: #ffff;
+            text-align: center ;
+            line-height: 400px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: xx-large;
+        }
+
+        .sayfa {
+            display: flex;
+        }
+
+
+
+
+
+
+        .EnSonHaberler {
+            height: 400px;
+            width: 300px;
+            background-color: rgb(223, 18, 18);
+            margin-left: 30px;
+            text-align: center;
+            margin-bottom: 100px;
+            margin-top: 30px;
+            border : 1px solid black;
+            border-radius: 5px;
+        }
+
+        .sira {
+            background-color: rgb(26, 23, 23);
+            display: flex;
+
+            align-items: center;
+            height: 90px;
+            gap: 10px;
+        }
+
+        .sira img {
+            height: 100%;
+            width: 100px;
+
+        }
+
+        .EnSonHaberBaslik {
+            color: #ffff;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .sira p {
+            color: #ffff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+
+        .newsBox {
+            background-color: rgb(255, 255, 255);
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+            justify-content: center;
+            gap: 50px;
+
+        }
+        .newsBox img {
+            width: 250px;
+            height: 250px;   
+        }
+        .news{
+            border: 2px solid black;
+            background-color: #ffff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+         
+        }
+        .news:hover{
+               box-shadow: 0 0 7px 4px black;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="menu">
+
+        <ul>
+            <li><a href="#">EKONOMİ</a></li>
+            <li><a href="#">MAGAZİN</a></li>
+            <li><a href="#">SPOR </a></li>
+            <li><a href="#">KRİPTO PARA</a></li>
+            <li><a href="#">HABER</a></li>
+        </ul>
+        <hr>
+    </nav>
+    <div class="sayfa">
+        <div class="EnSonHaberler">
+
+            <h1 class="EnSonHaberBaslik">En Son Haberler</h1>
+            <div class="sira">
+                <img src="resim.png" alt="re">
+                <p>Okullar Tatil Edildi.</p>
+            </div>
+            <div class="sira">
+                <img src="kisiler.png" alt="re">
+                <p>Yusuf Tekin İstifa Etti.</p>
+            </div>
+            <div class="sira">
+                <img src="İstanbulResim.png" alt="re">
+                <p>Covid-20 Çıktı</p>
+            </div>
+            <div class="sira">
+                <img src="yılan_oyunu.jpg" alt="re">
+                <p>Dolar 1 tl oldu</p>
+            </div>
+        </div>
+        <div class="icerik">
+            Bu SİTEDE Kİ HABERLER UYDURMA HABERLERDİR
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <div class="newsBox">
+        <div class="news">
+            <img src="resim.png" alt="">
+            <p><a href="#">Bytecore Sitesi Yayınlandı.</a></p>
+        </div>
+        <div class="news">
+            <img src="resim.png" alt="">
+            <p><a href="#">Yusuf Tekin İstifa Etti.</a></p>
+        </div>
+        <div class="news">
+            <img src="resim.png" alt="">
+            <p><a href="#">Yusuf Tekin İstifa Etti.</a></p>
+        </div>
+        <div class="news">
+            <img src="resim.png" alt="">
+            <p><a href="#">Yusuf Tekin İstifa Etti.</a></p>
+        </div>
+        <div class="news">
+            <img src="resim.png" alt="">
+            <p><a href="#">Yusuf Tekin İstifa Etti.</a></p>
+        </div>
+     
+
+    </div>
+
+
+</body>
+
+</html>

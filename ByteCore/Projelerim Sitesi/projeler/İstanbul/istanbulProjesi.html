@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İstanbul</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+    }
+
+    .videoContainer {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+
+    .overflow-hidden {
+        color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(255, 255, 255);
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .baslik {
+        font-family: fantasy;
+        font-size: 80px;
+        font-weight: bolder;
+        text-shadow: 15px 15px 25px rgb(0, 0, 100);
+
+
+
+
+
+        animation: zoomOutEffect 2s ease-out forwards;
+    }
+
+    @keyframes zoomOutEffect {
+        0% {
+            transform: scale(2);
+            opacity: 0;
+        }
+
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+    }
+
+    .galataKulesi {
+        display: flex;
+        flex-wrap: wrap;
+
+        background-color: #ffff;
+        margin-top: 250px;
+        gap: 20px;
+        margin: 20px 20px;
+    }
+
+    .galataResim {
+        height: 500px;
+        width: 500px;
+    }
+
+    .paragrafOrtak {
+        padding: 15px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        line-height: 29px;
+
+    }
+
+    .kizKulesi {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #ffff;
+        margin-top: 50px;
+        gap: 10px;
+        margin: 20px 20px;
+    }
+
+    .kizKulesiResim {
+        height: 500px;
+        width: 400px;
+    }
+
+    .konumLinki {
+        height: 50px;
+        width: 25%;
+        background-color: rgb(43, 43, 43);
+        margin: 10px 10px;
+        text-align: center;
+        border-radius: 25px;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .konumLinki a {
+        color: rgb(11, 183, 252);
+        text-decoration: none;
+    }
+
+    .konumLinki a:hover {
+        text-decoration: underline;
+
+    }
+
+    .BaslikOrt {
+        margin-left: 30px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .yerebatanSarnici {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #ffff;
+        margin-top: 50px;
+        gap: 10px;
+        margin: 20px 20px;
+    }
+
+    .yerebatanSarniciResim {
+        height: 500px;
+        width: 800px;
+    }
+
+    .ayasofyaCami {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #ffff;
+        margin-top: 50px;
+        gap: 10px;
+        margin: 20px 20px;
+    }
+
+    .rumeliHisari {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #ffff;
+        margin-top: 50px;
+        gap: 10px;
+        margin: 20px 20px;
+    }
+
+    .topkapiSarayi {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #ffff;
+        margin-top: 50px;
+        gap: 10px;
+        margin: 20px 20px;
+    }
+
+    footer {
+        width: 100%;
+        height: 100px;
+        background-color: #121212;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+
+</style>
+
+<body>
+    <audio loop autoplay >
+        <source src="muzikler/Senİstanbulsun-GökhanTürkmen.mp3">
+    </audio>
+    <div class="videoContainer">
+       
+        <video src="videolar/İstanbulDroneVideo.mp4" class="video" loop muted autoplay>
+            Tarayıcınız video etiketini desteklemiyor
+        </video>
+        <div class="overflow-hidden">
+            <h1 class="baslik">İSTANBUL'A HOŞGELDİNİZ</h1>
+
+        </div>
+    </div>
+    <h1 class="BaslikOrt">1. GalataKulesi</h1>
+    <div class="galataKulesi">
+
+        <img src="resimler/GalataResim.png" alt="Resim Bulanamadı." class="galataResim">
+
+        <p class="paragrafOrtak">İstanbul'un tarihî silüetinin eşsiz bir parçası olan Galata Kulesi, sadece mimari bir
+            yapı değil, aynı zamanda şehrin yüzlerce yıllık dramlarına ve dönüşümlerine tanıklık eden canlı bir
+            simgedir. 1348 yılında, Karadeniz ve Akdeniz ticaret yollarının kalbinde yer alan Cenevizliler tarafından,
+            kolonilerini koruma ve gözetleme amacıyla taştan inşa edilmiştir. Sekizgen zemin üzerine oturtulmuş
+            silindirik gövdesi ve konik çatısıyla Orta Çağ mimarisinin sağlam bir örneği olan Kule, ilk yapıldığında 50
+            metrenin üzerindeki yüksekliğiyle şehrin en belirgin yapılarından biriydi. Osmanlı İmparatorluğu'nun
+            İstanbul'u fethinden sonra (1453), Kule'nin işlevi değişmiş, zaman zaman zindan olarak kullanılmış, ancak
+            daha çok şehrin en kritik noktalarından biri olduğu için yangın gözetleme kulesi rolünü üstlenmiştir.
+
+            Kulenin kültürel mirasa en büyük katkısı ise şüphesiz Hezarfen Ahmed Çelebi efsanesidir. Rivayete göre, 17.
+            yüzyılda Hezarfen, kendi yaptığı tahta kanatlarla bu kuleden atlayıp Boğaz'ı aşarak Üsküdar'a süzülmüş ve
+            dünyada kıtalararası uçuş yapan ilk insan olmuştur. Bu efsanevi olay, Kule'nin adını hem bilimin hem de
+            cesaretin sembolü olarak tarihe kazımıştır. Depremler, fırtınalar ve yangınlarla defalarca hasar görmesine
+            rağmen, Kule her zaman sadık kalarak restore edilmiş ve varlığını sürdürmüştür. Günümüzde, restore edilmiş
+            haliyle ziyaretçilerini ağırlayan Kule, terasından sunduğu 360 derecelik panoramik İstanbul manzarası—tarihî
+            yarımada, Haliç ve Boğaz'ın gözler önüne serildiği—nedeniyle turistlerin ve fotoğrafçıların vazgeçilmez
+            durağıdır. Tarihsel katmanları, mimari dayanıklılığı ve efsanelerle bezenmiş öyküsü ile Galata Kulesi,
+            İstanbul'un sadece coğrafi değil, aynı zamanda ruhani merkezlerinden biri olmayı sürdürmektedir.</p>
+        <div class="konumLinki">
+            <p>Konum Almak İçin <a href="https://maps.app.goo.gl/j1geN7z2kA13E3hs7" target="_blank">Tıklayın</a></p>
+        </div>
+
+
+    </div>
+    <h1 class="BaslikOrt">2. Kız Kulesi</h1>
+    <div class="kizKulesi">
+        <img src="resimler/kizKulesiResim.jpg" alt="resim Bulanamadı." class="kizKulesiResim">
+        <p class="paragrafOrtak">
+            İstanbul Boğazı'nın Marmara Denizi'ne açılan kısmında, Üsküdar Salacak açıklarında küçük bir ada üzerinde
+            tek başına yükselen Kız Kulesi, şehrin en romantik ve gizemli yapılarından biridir. Tarih boyunca varlığı MÖ
+            410 yılına kadar uzanan Kule, ilk olarak Atinalı komutan Alkibiades tarafından Boğaz'dan geçen gemileri
+            kontrol etmek ve vergi toplamak amacıyla bir gümrük noktası olarak inşa edilmiştir. Yüzyıllar boyunca Bizans
+            İmparatorluğu ve Osmanlı İmparatorluğu dönemlerinde farklı amaçlara hizmet etmiştir; gözetleme kulesi, deniz
+            feneri, karantina istasyonu ve radyo istasyonu gibi çeşitli roller üstlenmiştir.
+
+            Ancak Kız Kulesi'ni asıl ölümsüzleştiren, etrafını saran sayısız efsane ve hikâyedir. En bilinen efsaneye
+            göre, bir kral, çok sevdiği kızı için kâhinlerin "kızınızı 18 yaşına gelmeden bir yılan sokacak ve ölecek"
+            kehanetinden korkarak, onu deniz ortasındaki bu kuleye kapatır. Kızının 18. yaş gününde ona gönderilen meyve
+            sepetinden çıkan bir yılan kızı sokar ve kehanet gerçekleşir. Bu hüzünlü hikâye, Kule'nin adının "Kız
+            Kulesi" olarak anılmasının en yaygın sebebidir. Diğer bir efsane ise, Kule'nin altındaki zincirle Boğaz'ın
+            kapatılması, yani Haliç'teki zincirin devamı olduğu yönündedir. Her ne amaçla kullanılmış olursa olsun, Kule
+            her zaman savunma, gözetleme ve ayrılık gibi derin anlamlar taşımıştır. Günümüzde, restore edilmiş haliyle
+            bir restoran ve müze olarak hizmet veren Kız Kulesi, özellikle gün batımında silüeti ve tarihiyle
+            izleyenlere benzersiz bir görsel şölen sunmaya devam etmektedir. İstanbul'un kültürel belleğinde, ayrılık,
+            aşk ve imkânsızlığın simgesi olarak eşsiz bir yere sahiptir.
+        </p>
+        <div class="konumLinki">
+            <p>Konum Almak İçin <a href="https://maps.app.goo.gl/sjvWqziV1iPqGv4M6" target="_blank">Tıklayın</a></p>
+        </div>
+    </div>
+    <h1 class="BaslikOrt">3. Yerebatan Sarnıcı</h1>
+    <div class="yerebatanSarnici">
+        <img src="resimler/yerebatanSarniciResim.jpg" alt="resim Bulanamadı." class="yerebatanSarniciResim">
+        <p class="paragrafOrtak">Ayasofya'nın hemen yanı başında, ziyaretçilerini İstanbul'un gürültüsünden uzak, serin
+            ve mistik bir yeraltı dünyasına davet eden Yerebatan Sarnıcı (Bazilika Sarnıcı), şehrin yüzeyin altındaki en
+            görkemli mimari şaheserlerinden biridir. Bizans İmparatoru I. Justinianus tarafından 532 yılında inşa
+            ettirilen bu devasa yapı, kente su sağlamak için tasarlanmış büyük bir rezervuardır. Yaklaşık 10.000 ton su
+            depolama kapasitesine sahip olan sarnıç, 138 metre uzunluğunda ve 65 metre genişliğinde, adeta yeraltında
+            bir ormanı andıran bir yapıda 336 adet mermer sütunla desteklenmektedir. Bu sütunların her biri farklı
+            dönemlere ait tapınak ve yapı kalıntılarından toplanmıştır, bu da her bir sütunun kendine has bir başlık ve
+            işçiliğe sahip olmasını sağlar. Sarnıcın mistik atmosferi, loş ışıklandırma, sütunlar arasında yansıyan su
+            ve yankılanan damlalar sayesinde benzersiz bir deneyim sunar. Ancak Yerebatan Sarnıcı'nı kültürel açıdan en
+            önemli kılan detaylar, sarnıcın en arka köşesinde yer alan, kaide olarak kullanılan ters ve yan duran iki
+            Medusa Başı heykelleridir. Bu heykellerin kökeni ve sarnıçta ters duruş amaçları hala gizemini korumakta,
+            yapının mitolojik ve tarihi çekiciliğini pekiştirmektedir. Yüzyıllardır süregelen restorasyonlar sayesinde
+            günümüzde kültürel bir müze ve etkinlik alanı olarak kullanılan Sarnıç, hem Bizans mühendisliğinin dehasını
+            hem de İstanbul'un çok katmanlı tarihini gözler önüne sermektedir.</p>
+        <div class="konumLinki">
+            <p>Konum Almak İçin <a href="https://maps.app.goo.gl/eUmRjoTkbTHK143w9" target="_blank">Tıklayın</a></p>
+        </div>
+    </div>
+    <h1 class="BaslikOrt">4. Ayasofya Cami</h1>
+    <div class="ayasofyaCami">
+        <img src="resimler/ayasofyaCamiResim.png" alt="resim Bulanamadı." class="ayasofyaCamiResim">
+        <p class="paragrafOrtak">İstanbul'un tarihî yarımadasında, Sultanahmet Meydanı'nın kalbinde yer alan Ayasofya-i
+            Kebir Cami-i Şerifi, sadece mimari bir yapı değil, aynı zamanda üç büyük medeniyetin ve bin beş yüz yıllık
+            inanç değişimlerinin yaşayan bir anıtıdır. İlk olarak 537 yılında Bizans İmparatoru I. Justinianus
+            tarafından bir katedral olarak inşa edilen Ayasofya (Kutsal Bilgelik), o dönemin en büyük kubbesi ve
+            mühendislik harikası olarak dünya mimarlık tarihine adını altın harflerle yazdırmıştır. İç mekanının
+            ihtişamı, muazzam kubbesi ve ışık oyunlarıyla ziyaretçilerini büyüleyen yapı, 916 yıl boyunca Doğu Roma
+            İmparatorluğu'nun ana kilisesi olarak hizmet vermiştir. 1453 yılında Fatih Sultan Mehmed'in İstanbul'u
+            fethiyle birlikte, yapının camiye dönüştürülmesi emredilmiş ve bu tarihten itibaren İslam sanatının ve
+            mimarisinin öğeleri (minareler, mihrap, minber) eklenerek Osmanlı İmparatorluğu'nun en kutsal camilerinden
+            biri haline gelmiştir. Yüzyıllar boyunca mozaikleri sıva altında korunan Ayasofya, 1934 yılında müze statüsü
+            kazanarak evrensel bir miras olarak sergilenmeye başlanmış, ancak son olarak 2020 yılında tekrar cami
+            statüsüne döndürülmüştür. Bu çok katmanlı tarihî miras, bir zamanlar Hristiyan azizlerin mozaikleri ile
+            Osmanlı hattatlarının devasa panolarının yan yana durduğu eşsiz bir kültürel sentezi temsil ederek,
+            İstanbul'un hem Bizans hem de Osmanlı kimliğini aynı anda taşıyan en güçlü simgesidir.</p>
+        <div class="konumLinki">
+            <p>Konum Almak İçin <a href="https://maps.app.goo.gl/ThQcTQiRoY14ruEE6" target="_blank">Tıklayın</a></p>
+        </div>
+    </div>
+    <h1 class="BaslikOrt">5. Rumeli Hisarı</h1>
+    <div class="rumeliHisari">
+        <img src="resimler/rumeliHisariResim.jpg" alt="resim Bulanamadı." class="rumeliHisariResim">
+        <p class="paragrafOrtak">İstanbul Boğazı'nın Avrupa yakasında, Boğaz'ın en dar noktasında, Anadolu Hisarı'nın
+            tam karşısında yer alan Rumeli Hisarı, sadece görkemli bir savunma yapısı değil, aynı zamanda İstanbul'un
+            fethinin stratejik bir sembolüdür. 1452 yılında, Fatih Sultan Mehmed'in emriyle, bizzat Fatih'in katılımıyla
+            sadece dört ay gibi rekor bir sürede inşa ettirilen bu devasa kale, Fethin hazırlık aşamasındaki en kritik
+            adımdır. İnşa amacı basitti: Boğaz'dan Marmara Denizi'ne geçmeye çalışan Bizans'a yardım getirebilecek her
+            türlü gemiyi, Anadolu yakasındaki Anadolu Hisarı ile birlikte kontrol altına almaktı. Kale, özellikle
+            topların yerleştirildiği üç büyük kulesiyle (Saruca Paşa, Halil Paşa ve Zağanos Paşa kuleleri) Boğaz'ı tam
+            anlamıyla kilitlemiş, Karadeniz'den gelen iaşe ve yardımın Bizans'a ulaşmasını keserek şehri abluka altına
+            almıştır.
+
+            Osmanlı mimarisinin mühendislik dehasını sergileyen Hisar'ın duvarları, yer yer 7 metreye varan
+            kalınlıktadır. Dışarıdan bakıldığında Fatih Sultan Mehmed'in adının Arapça baş harfi olan 'Mim' (M) harfini
+            andıran bir silüete sahip olduğu rivayet edilir. Fetihten sonra askeri önemini sürdürmüş, ancak daha sonra
+            zindan ve gümrük karakolu olarak da kullanılmıştır. Zaman içinde doğal afetler ve ihmal nedeniyle yıpransa
+            da, kapsamlı restorasyonlarla ayakta tutulmuştur. Günümüzde, muazzam surları, kuleleri ve eşsiz Boğaz
+            manzarasıyla hem açık hava müzesi hem de yaz aylarında konser ve kültürel etkinliklere ev sahipliği yapan
+            tarihi bir mekân olarak hizmet vermektedir. Rumeli Hisarı, hem coğrafi konumu hem de taşıdığı tarihi misyon
+            itibarıyla, İstanbul'un sadece bir şehir değil, bir imparatorluk başkenti olmasındaki en önemli unsurlardan
+            biridir.</p>
+        <div class="konumLinki">
+            <p>Konum Almak İçin <a href="https://maps.app.goo.gl/kkEkXaDkodC3TR1b7" target="_blank">Tıklayın</a></p>
+        </div>
+    </div>
+    <h1 class="BaslikOrt">6. Topkapı Sarayı</h1>
+    <div class="topkapiSarayi">
+        <img src="resimler/topkapiSarayiResim.jpg" alt="resim Bulanamadı." class="topkapiSarayiResim">
+        <p class="paragrafOrtak">İstanbul'un tarihi yarımadasında, Sarayburnu'nda, Marmara Denizi ve Boğaz'a hakim eşsiz
+            bir konumda yer alan Topkapı Sarayı, Osmanlı İmparatorluğu'nun neredeyse 400 yıl boyunca idari, eğitim ve
+            sanat merkezi olmuştur. Fatih Sultan Mehmed'in İstanbul'u fethinden kısa bir süre sonra, 1460'larda inşasına
+            başlanan Saray, Osmanlı sultanlarının evi olmasının yanı sıra, devleti yönettikleri, kanunların çıkarıldığı
+            ve imparatorluğun kaderinin belirlendiği ana merkezdi. Saray, tek bir büyük yapıdan ziyade, her biri farklı
+            işlevlere sahip dört ana avlu ve sayısız binadan oluşan, kendi içinde organize, küçük bir şehir
+            görünümündedir. Bu avlular; Alay Meydanı (birinci avlu), Divan Meydanı (ikinci avlu), Enderun Avlusu (üçüncü
+            avlu) ve Köşkler Bahçesi'nden (dördüncü avlu) oluşur ve her avlu, idari hiyerarşide bir üst kademeyi temsil
+            ederdi.
+
+            Sarayın en önemli kısımlarından biri olan Harem, padişahın ailesi, annesi (Valide Sultan), eşleri ve
+            cariyeleri ile saray hizmetlilerinin yaşadığı karmaşık bir labirenttir; burası, saray politikalarının ve güç
+            mücadelelerinin gizli merkezi olarak işlerdi. Divan-ı Hümayun (İmparatorluk Divanı) ise, vezirlerin toplanıp
+            devlet işlerini görüştüğü, sadrazamın yönettiği ana yönetim yapısıdır. Bugün Topkapı Sarayı, dünyanın en
+            zengin müzelerinden biri olarak kabul edilir; içerisinde kutsal emanetler (Hazreti Muhammed'e ait eşyalar,
+            kılıçlar, hırka), Osmanlı padişahlarının zengin koleksiyonları, el yazmaları, paha biçilmez mücevherler
+            (ünlü Kaşıkçı Elması dahil) ve Çin porselenleri gibi nadide eserler barındırmaktadır. 19. yüzyılda
+            padişahlar Dolmabahçe Sarayı'na taşınsa da, Topkapı Sarayı, Osmanlı gücünün ve ihtişamının sarsılmaz bir
+            sembolü ve tarihi bir hafıza merkezi olarak varlığını sürdürmektedir.</p>
+        <div class="konumLinki">
+            <p>Konum Almak İçin <a href="https://maps.app.goo.gl/BVwRKiAf67k1f6ty9" target="_blank">Tıklayın</a></p>
+        </div>
+    </div>
+
+
+    <footer>
+        Bu site Emre Küçük Tarafından Yapılmıştır
+    </footer>
+
+    
+</body>
+
+</html>

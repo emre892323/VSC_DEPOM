@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurslarım</title>
+    <link rel="icon" type="Resimler/jpg" href="Resimler/logoİcon.jpg">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0D1117;
+
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .kurslar {
+
+            height: 500px;
+            width: 100%;
+            background-color: #161B22;
+        }
+
+        .kurs {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #21262D;
+            width: 250px;
+            height: 250px;
+            border-radius: 25px;
+        }
+
+        .kurs:hover {
+            box-shadow: 0 0 10px 7px lightblue;
+
+            transition: 0.2s ease-in-out;
+        }
+
+        .resim {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            margin-left: 12px;
+
+            border: 3px solid #58A6FF;
+        }
+
+        .baslik {
+
+            color: #C9D1D9;
+            display: flex;
+            justify-content: center;
+            background-color: #0D1117;
+            padding: 10px 0;
+
+        }
+
+        .controlCenter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+            gap: 30px;
+        }
+
+        .Kurs_Adi {
+            color: #F0F6FC;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="kurslar">
+        <h1 class="baslik">KURSLARIM</h1>
+
+        <div class="controlCenter">
+            <div class="kurs">
+                <a href="https://www.udemy.com/share/10bQE73@mh73sJenZjTekkcFSea2w10Q8zPVacsG3AYlZ02ep5Upi1Rqm-Qauy4IBkMYRUhIEw==/"
+                    target="" class="link"><img src="Resimler/UdemyLogo.png" alt="#" class="resim"></a>
+                <p class="Kurs_Adi">Python Yapay Zeka</p>
+
+            </div>
+
+            <div class="kurs">
+                <a href="https://youtube.com/playlist?list=PLURN6mxdcwL86Q8tCF1Ef6G6rN2jAg5Ht&si=3o5UN8B45KOBqAJc"
+                    target="_blank" class="link"><img src="Resimler/JSlogo.png" alt="#" class="resim"></a>
+                <p class="Kurs_Adi">JavaScript Dersleri</p>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

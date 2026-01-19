@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim Formu | Dosya Gönderimi</title>
+    <style>
+        /* Modern Tasarım Stilleri */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 450px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #4a2d73;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        input[type="email"],
+        textarea,
+        input[type="file"] {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #764ba2;
+            outline: none;
+        }
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        button {
+            width: 100%;
+            background: #764ba2;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #5d3f82;
+        }
+
+        .note {
+            font-size: 12px;
+            color: #666;
+            text-align: center;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h2>Bize Ulaşın</h2>
+
+        <!-- FORM BAŞLANGICI -->
+        <!-- ACTION kısmındaki 'senin_id_buraya' yerine Formspree'den aldığın kodu yazmalısın -->
+        <form action="https://formspree.io/f/senin_id_buraya" method="POST" enctype="multipart/form-data">
+
+            <div class="input-group">
+                <label for="email">E-posta Adresiniz</label>
+                <input type="email" id="email" name="_replyto" placeholder="ornek@mail.com" required>
+            </div>
+
+            <div class="input-group">
+                <label for="message">Mesajınız</label>
+                <textarea id="message" name="message" placeholder="Mesajınızı buraya yazın..." required></textarea>
+            </div>
+
+            <div class="input-group">
+                <label for="files">Dosya/Resim Yükle (Birden fazla seçebilirsiniz)</label>
+                <input type="file" id="files" name="upload" multiple>
+            </div>
+
+            <!-- Başarılı gönderim sonrası gidilecek sayfa (isteğe bağlı) -->
+            <!-- <input type="hidden" name="_next" value="https://seninsiten.com/tesekkurler.html"> -->
+
+            <button type="submit">Formu Gönder</button>
+        </form>
+        <!-- FORM BITIŞI -->
+
+        <p class="note">Dosyalar doğrudan e-posta adresimize iletilecektir.</p>
+    </div>
+
+</body>
+
+</html>

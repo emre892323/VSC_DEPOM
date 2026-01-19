@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+        }
+
+        table {
+            border-collapse: collapse;
+
+
+        }
+
+        th,
+        td,
+        tr,
+        table {
+            border: 1px solid #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <fieldset>
+            <legend>Üyelik İşlemleri</legend>
+
+            <table>
+                <tr>
+                    <th colspan="5">Hesap Bilgileriniz</th>
+                </tr>
+                <tr>
+                    <td> <label for="username">Kullanıcı Adı:</label></td>
+                    <td colspan="4"> <input type="text" name="username" id="username"  placeholder="kullanıcı adı girin."></td>
+                </tr>
+
+                <tr>
+                    <td><label for="mail">E-posta:</label></td>
+                    <td colspan="4"> <input type="email" name="mail" id="mail" placeholder="email adresi girin."></td>
+                </tr>
+                <tr>
+                    <td> <label for="password">Parola:</label></td>
+                    <td colspan="4"><input type="password" name="password" id="password" placeholder="parola Girin."></td>
+                </tr>
+
+                <tr>
+                    <th colspan="5"> Kişisel Bilgilerim</th>
+                </tr>
+                <tr>
+                    <th> cinsiyetiniz:</th>
+
+
+                    <td colspan="2">
+                        <input type="radio" name="cinsiyet" id="cinsiyet">erkek
+                    </td>
+                    <td colspan="2">
+                        <input type="radio" name="cinsiyet" id="cinsiyet">Kadın
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <th>Hobileriniz :</th>
+                    <td>
+                        <input type="checkbox" name="sinema" id="sinema"> sinema
+                    </td>
+
+
+                    <td>
+                        <input type="checkbox" name="gezmek" id="gezmek">gezmek
+                    </td>
+
+                    <td>
+                        <input type="checkbox" name="spor Yapmak" id="spor Yapmak">spor Yapmak
+                    </td>
+
+                    <td>
+                        <input type="checkbox" name="Kitap" id="Kitap">Kitap
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5"> Yaşadığınız il: <select name="iller" id="iller">
+                            <optgroup label="İstanbul">
+                                <option value="11">Esenyurt</option>
+                                <option value="12">Beylikdüzü</option>
+                                <option value="13">Avcılar</option>
+                            </optgroup>
+                            <option value="2">Ankara</option>
+                            <option value="3">Ordu</option>
+                            <option value="4">Musa</option>
+                            <option value="5">İzmir</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td>
+                        adres:
+                        <textarea name="" id="" cols="20px" rows="4" placeholder="Adresiniz Girin" tabindex="2"></textarea>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td colspan="2"> <input type="submit" value="kaydet">
+                    </td>
+                    <td colspan="3">
+                        <input type="reset">
+                    </td>
+                </tr>
+
+
+            </table>
+        </fieldset>
+    </form>
+</body>
+
+</html>

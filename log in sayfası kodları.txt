@@ -1,0 +1,159 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const loginBtn = document.getElementById('login-btn');
+    const usernameInput = document.getElementById('username');
+    const passwordInput = document.getElementById('password');
+
+    // Birden fazla kullanıcıyı tanımlayan JavaScript nesne dizisi
+    const users = [
+        { username: 'admin', password: '3435' },
+        { username: 'furkan', password: '2145' },
+        { username: 'musa', password: '3973' },
+        { username: 'ibrahim', password: '6974' },
+        { username: 'utku', password: '7923' },
+       
+    ];
+
+    loginBtn.addEventListener('click', function () {
+        const username = usernameInput.value;
+        const password = passwordInput.value;
+
+        // Dizideki kullanıcıları kontrol et
+        const foundUser = users.find(user =>
+            user.username === username && user.password === password
+        );
+
+        if (foundUser) {
+            // Giriş başarılı
+            alert('Giriş başarılı! Hoş geldin ' + foundUser.username + '!');
+
+            // Koşullu yönlendirme: Admin ise proje.html'e, değilse bakım.html'e
+            if (foundUser.username === 'admin') {
+                window.location.href = 'proje_alan_secimi.html?login=true'; // Admin projelere gitsin
+            } else {
+                window.location.href = 'proje.html?login=true'; // Diğerleri bakıma gitsin
+            }
+
+        } else {
+            // Giriş başarısız
+            alert('Kullanıcı adı veya şifre yanlış. Lütfen tekrar dene.');
+        }
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="tr">
+
+<head><!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8N7V06D3FD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-8N7V06D3FD');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proje Yönetim Alanı</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        
+        h1 {
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Buton gibi görünmesi için link (a) etiketine stil veriyoruz */
+        .button-group a {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.2s;
+            text-decoration: none; /* Alt çizgiyi kaldırır */
+            display: inline-block; /* Genişlik/yükseklik vermeyi sağlar */
+            text-align: center;
+        }
+
+        /* Özel Alan Butonu Stili */
+        #ozel-alan {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        #ozel-alan:hover {
+            background-color: #c82333;
+        }
+
+        /* Ortak Alan Butonu Stili */
+        #ortak-alan {
+            background-color: #28a745;
+            color: white;
+        }
+        
+        #ortak-alan:hover {
+            background-color: #1e7e34;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Yönetim Paneli</h1>
+    
+    <div class="button-group">
+        
+        <a id="ortak-alan" href="proje.html" target="_blank" >ORTAK ALAN</a>
+        
+        <a id="ozel-alan" href="proje_private.html" target="_blank" >ÖZEL ALAN</a>
+    </div>
+    
+    </body>
+</html>

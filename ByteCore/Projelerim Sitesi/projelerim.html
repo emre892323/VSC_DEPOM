@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projelerim</title>
+    <style>
+        /*Scroll Bar Özelleştirme Kodları*/
+        ::-webkit-scrollbar{
+            background-color: rgb(72, 76, 78);
+            width: 10px;
+        }
+        ::-webkit-scrollbar-thumb{
+            background-color: #38c4b8;
+            border-radius: 25px;
+            border: 3px solid #35b6ab;
+      
+        }
+
+        /*Scroll Bar Özelleştirme Kodları Bitişi*/
+        body {
+            background-color: #0D1117;
+            margin: 0;
+            padding: 0;
+        }
+
+        .baslik {
+            background-color: #161B22;
+            width: 100%;
+            height: 70px;
+            text-align: center;
+            line-height: 60px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #0fc7ff;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        .projeler {
+            background-color: #0D1117;
+            min-height: calc(100vh - 70px);
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 50px;
+            text-align: center;
+        }
+
+        .projem1 {
+            height: 200px;
+            width: 200px;
+            background-color: #161B22;
+            border-radius: 25px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center
+        }
+
+        /*incele*/
+        .projem1 a {
+            position: relative;
+            display: block;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 25px;
+        }
+
+        .proje_adi {
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            text-shadow: 1px 1px 10px #1fcfdb;
+            font-size: larger;
+
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+
+
+
+            background-color: rgba(0, 0, 0, 0.85);
+            color: white;
+            font-weight: bold;
+
+
+
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+
+
+
+            opacity: 0;
+            transition: opacity 0.3s;
+            border-radius: 25px;
+        }
+
+        .projem1:hover .proje_adi {
+            opacity: 1;
+        }
+
+        /*İnceleme bitir*/
+
+        .projem1 a img {
+            height: 200px;
+            width: 200px;
+            border-radius: 25px;
+
+        }
+
+        .projem1:hover {
+            box-shadow: 0 0 10px 6px #58A6FF;
+            transition: 0.5s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="baslik">
+        <h1>Projelerim</h1>
+    </div>
+    <div class="projeler">
+
+        <div class="projem1"><a href="#"><img src="resimler/yılan_oyunu.jpg" alt="Resim Bulanamadı."><span class="proje_adi">Yılan Oyunu</span></a></div>
+        <div class="projem1"><a href="dersProgramıVeSınavTakvimi/ders_programı_table_alıstırma.html"><img src="resimler/ders_Programı_resim.jpg"alt="Resim Bulanamadı."><span class="proje_adi">Ders Programı</span></a></div>
+        <div class="projem1"><a href="dersProgramıVeSınavTakvimi/sınav_Tarihleri.html"><img src="resimler/sınav_takvimi_resim.jpg"alt="Resim Bulanamadı."><span class="proje_adi">Ortak Sınav Takvimi</span></a></div>
+        <div class="projem1"><a href="projeler/İstanbul/istanbulProjesi.html"><img src="resimler/İstanbulResim.png"alt="Resim Bulanamadı."><span class="proje_adi">İstanbul</span></a></div>
+        <div class="projem1"><a href="digerKisiler.html"><img src="resimler/kisiler.png" alt="Resim Bulanamadı."><span class="proje_adi">Diğer Kişiler</span></a></div>
+
+
+
+
+
+    </div>
+
+
+
+    <!--MİX-BLEND-MODE KODUNU DENE-->
+
+
+</body>
+
+</html>

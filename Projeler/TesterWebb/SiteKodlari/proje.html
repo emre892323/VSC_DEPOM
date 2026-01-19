@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head><!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8N7V06D3FD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-8N7V06D3FD');
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8N7V06D3FD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-8N7V06D3FD');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projelerim</title>
+
+    <style>
+        /* ================================================= */
+        /* RGB ANİMASYONU KEYFRAMES */
+        /* ================================================= */
+        @keyframes rotating-border {
+            to {
+                --angle: 360deg;
+                /* Açı 0'dan 360 dereceye dönsün */
+            }
+        }
+
+        /* ================================================= */
+        /* 1. GENEL VE BODY STİLLERİ */
+        /* ================================================= */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            transition: background-color 0.4s ease;
+        }
+
+        .project-active-body {
+            background-color: #e0e0e0;
+        }
+
+        /* İçerik başlangıçta gizli başlar (kilit açma animasyonu bitene kadar) */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0;
+            transition: opacity 0.5s ease 0.7s;
+        }
+
+        /* İçerik görünür olduğunda body'ye bu class eklenir */
+        body.content-visible .container {
+            opacity: 1;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .search-container {
+            margin-bottom: 30px;
+        }
+
+        #searchInput {
+            width: 70%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .projects-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Proje Kartı Temel Stilleri */
+        .project-item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 20px 1px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+            width: 100%;
+            transition: transform 0.5s, box-shadow 0.3s;
+            z-index: 1;
+        }
+
+        /* Proje Link Stilleri */
+        .project-item a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 18px;
+            display: block;
+            transition: color 0.3s;
+        }
+
+        #yukleniyo {
+            cursor: progress;
+            transition: 1s;
+        }
+
+        #musa_yok {
+            cursor: none;
+        }
+
+        .project-item a:hover {
+            color: #007BFF;
+        }
+
+        /* Kilit Linki Stilleri */
+        #lockLink {
+            display: inline-block;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            text-align: center;
+            padding: 15px 20px;
+            border: 2px solid #333;
+            border-radius: 8px;
+            transition: background-color 0.3s, color 0.3s;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        #lockLink:hover {
+            background-color: #333;
+            color: white;
+        }
+
+        #lockLink img {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+
+        /* ================================================= */
+        /* 2. RGB SINIFI VE HOVER EFEKTLERİ */
+        /* ================================================= */
+        .rgb-border {
+            position: relative;
+            overflow: hidden;
+            --angle: 0deg;
+            border: 2px solid transparent;
+        }
+
+        /* RGB/Gökkuşağı Katmanı (::before) */
+        .rgb-border::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            z-index: -1;
+            border-radius: inherit;
+            background: conic-gradient(from var(--angle),
+                    #ff0000, #ff8c00, #ffff00, #008000, #0000ff, #4b0082, #9400d3, #ff0000);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .rgb-border:hover::before {
+            opacity: 1;
+            animation: rotating-border 4s linear infinite;
+        }
+
+        /* IŞILDAYAN ARKA PLAN EFEKTİ (Kartın kendisi) */
+        .rgb-border:hover {
+            transform: translateY(-5px) scale(1.02);
+            z-index: 2;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 0 0 25px rgba(255, 0, 255, 0.7);
+        }
+
+        /* ================================================= */
+        /* 3. KİLİT EKRANI VE ANİMASYON STİLLERİ */
+        /* ================================================= */
+        #lock-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #333;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.7s ease, visibility 0.7s;
+        }
+
+        #lock-screen.hidden {
+            opacity: 0;
+            visibility: hidden;
+            /* Animasyon bitince ekranı tamamen kaldır */
+        }
+
+        #progress-bar-container {
+            width: 80%;
+            max-width: 400px;
+            height: 20px;
+            background-color: #555;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        #progress-bar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #007bff, #ff007b);
+            transition: width 0.1s linear;
+        }
+
+        #lock-text {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="lock-screen">
+        <div id="lock-text">Hazırlanıyor...</div>
+        <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Hoş Gelmedin!</h1>
+        <p>Proje listene göz atabilir veya arama yapabilirsin.</p>
+
+        <a id="lockLink" href="#">
+            <img src="resimler/lock.jpg" alt="Kilit Simgesi">
+            Kitlemek İçin Tıkla
+        </a>
+
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Proje ara...">
+        </div>
+
+        <div class="projects-list" id="projectsList">
+            <div class="project-item rgb-border"><a href="projelerDosylari/snake.html" target="_blank">Yılan Oyunu(PC)</a></div>
+            <div class="project-item rgb-border"><a href="projelerDosylari/ibo.html" target="_blank">İbrahim'in Sitesi</a></div>
+            <div class="project-item rgb-border" id="musa_yok"><a href="projelerDosylari/musa.html" target="_blank" id="musa_yok">Musa</a></div>
+            <div class="project-item rgb-border" id="musa_yok"><a href="https://musaprositesi.netlify.app/"target="_blank" id="musa_yok">MusaPro'nun Sitesi</a></div>
+          
+          
+            <div class="project-item rgb-border"><a href="projelerDosylari/dersProgramıVeSınavTakvimi/sınav_Tarihleri.html"target="_blank">Ortak Sınav Takvimi</a></div>
+            <div class="project-item rgb-border"><a href="projelerDosylari/dersProgramıVeSınavTakvimi/ders_programı_table_alıstırma.html"target="_blank">Ders Programı</a></div>
+
+        </div>
+    </div>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            // DOM Elementleri
+            const searchInput = document.getElementById('searchInput');
+            const projectItems = document.querySelectorAll('.project-item');
+            const body = document.body;
+            const lockLink = document.getElementById('lockLink');
+            const lockScreen = document.getElementById('lock-screen');
+            const progressBar = document.getElementById('progress-bar');
+            const lockText = document.getElementById('lock-text');
+
+            // Kilit açma animasyonunu başlatan fonksiyon
+            function startUnlockAnimation() {
+                // İçerik başlangıçta gizli başlar
+                body.classList.remove('content-visible');
+                lockScreen.classList.remove('hidden');
+                lockText.textContent = `Kilit Açılıyor... %0`;
+                progressBar.style.width = '0%';
+
+                let progress = 0;
+                const totalDuration = 1500; // 1.5 saniye sürecek
+                const interval = 20;
+
+                const unlockProgress = setInterval(() => {
+                    progress += (interval / totalDuration) * 100;
+
+                    if (progress >= 100) {
+                        progress = 100;
+                        clearInterval(unlockProgress);
+
+                        // Kilit açıldı
+                        lockText.textContent = "Kilit Açıldı! Hoş Geldiniz.";
+
+                        setTimeout(() => {
+                            // Kilit ekranını yavaşça kapat
+                            lockScreen.classList.add('hidden');
+                            // Asıl içeriği görünür yap
+                            body.classList.add('content-visible');
+                        }, 300);
+
+                    }
+
+                    progressBar.style.width = progress + '%';
+                    lockText.textContent = `Kilit Açılıyor... %${Math.floor(progress)}`;
+
+                }, interval);
+            }
+
+            // =======================================================
+            // URL KONTROLÜ İLE KİLİT AÇMA (LOGİN SONRASI) MANTIĞI
+            // =======================================================
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('login') === 'true') {
+                // URL'de login=true varsa animasyonu başlat
+                startUnlockAnimation();
+
+                // URL'yi temizle (Adres çubuğunda ?login=true görünmez)
+                history.replaceState(null, '', window.location.pathname);
+            } else {
+                // Direkt linkle gelindi veya sayfa yenilendi, animasyonsuz göster
+                lockScreen.classList.add('hidden');
+                body.classList.add('content-visible');
+            }
+
+            // =======================================================
+            // 1. ARAMA MANTIĞI
+            // =======================================================
+            searchInput.addEventListener('keyup', function (e) {
+                let searchQuery = e.target.value.toLowerCase();
+                projectItems.forEach(function (item) {
+                    let projectName = item.getElementsByTagName('a')[0].textContent.toLowerCase();
+                    if (projectName.includes(searchQuery)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+
+            // =======================================================
+            // 2. KART HOVER -> BODY ARKA PLAN DEĞİŞİMİ MANTIĞI
+            // =======================================================
+            projectItems.forEach(item => {
+                item.addEventListener('mouseenter', () => { body.classList.add('project-active-body'); });
+                item.addEventListener('mouseleave', () => { body.classList.remove('project-active-body'); });
+            });
+
+            // =======================================================
+            // 3. KİLİTLEME (LOGOUT) MANTIĞI
+            // =======================================================
+            lockLink.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                // Asıl içeriği hemen gizle
+                body.classList.remove('content-visible');
+                lockScreen.classList.remove('hidden');
+                lockText.textContent = "Proje Kilitleniyor... %0";
+                progressBar.style.width = '0%';
+
+
+                let progress = 0;
+                const totalDuration = 2000;
+                const interval = 20;
+
+                const lockProgress = setInterval(() => {
+                    progress += (interval / totalDuration) * 100;
+
+                    if (progress >= 100) {
+                        progress = 100;
+                        clearInterval(lockProgress);
+
+                        lockText.textContent = "Kilitlendi! Çıkış yapılıyor...";
+
+                        setTimeout(() => {
+                            // Login sayfasına yönlendir (index.html)
+                            window.location.href = "index.html";
+                        }, 500);
+
+                    }
+
+                    progressBar.style.width = progress + '%';
+                    lockText.textContent = `Proje Kilitleniyor... %${Math.floor(progress)}`;
+
+                }, interval);
+
+            });
+        });
+    </script>
+
+</body>
+
+</html>

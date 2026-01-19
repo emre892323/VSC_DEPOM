@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="tr">
+<!--ByteCore.com     Sitemin ismi-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnaMenü</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+        }
+
+        /*Scroll Bar Özelleştirme Kodları*/
+        ::-webkit-scrollbar {
+            background-color: rgb(72, 76, 78);
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #38c4b8;
+            border-radius: 25px;
+            border: 3px solid #35b6ab;
+
+        }
+
+        /*Scroll Bar Özelleştirme Kodları Bitişi*/
+
+        /*Menünün Başlangıcı*/
+
+        .menu {
+            background-color: #1D2B53;
+
+            height: 70px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 0 20px;
+            /* position: sticky;
+            top: 0; */
+
+        }
+
+        .menu ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            column-gap: 50px;
+            align-items: center;
+            margin-left: 15px;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            color: #F4F4F9;
+
+            font-size: x-large;
+            font-family: sans-serif;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .menu ul li a:hover {
+            color: #FF7F3F;
+
+            box-shadow: 0 0 10px #FF7F3F;
+
+            border-radius: 20px;
+        }
+
+        /*Menünün Bitişi*/
+
+        /* Logonun kodları Baslangıcı*/
+        .logo {
+            display: flex;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        .logo img {
+            padding-top: 3px;
+            height: 60px;
+            width: 67px;
+            border-radius: 50%;
+            margin: 0 8px 0 0;
+        }
+
+        /*Logonun Kodları Bitişi*/
+
+        /*Sitenin Tanıtım Kodları*/
+        .tanitim {
+            height: 500px;
+            width: 100%;
+            background-color: #3e5492;
+            margin: 15px auto;
+            border-radius: 25px;
+            display: flex;
+
+
+            transition: width 1s ease;
+            transition-delay: 0s;
+
+        }
+
+        .tanitim:hover {
+            width: 80%;
+            transition: width 1s ease;
+
+
+            transition-delay: 0s;
+            transition-delay: 0.5s;
+        }
+
+        .tanitim img {
+            height: 500px;
+            width: 45%;
+            border-radius: 25px;
+            border: 3px solid aqua;
+
+        }
+
+        .resim_prg {
+            padding: 60px 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: large;
+            background-color: #788dc5;
+            border-radius: 5px;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        .resim_prg a {
+            text-decoration: none;
+            color: #101111;
+            font-weight: bold;
+        }
+
+        .resim_prg a:hover {
+            text-decoration: underline;
+            transition: 0.5 ease-in-out;
+            color: #000000;
+        }
+
+        /*Tanitim Kodlari Bitisi*/
+
+        /*one cıkan kartlar baslangic*/
+
+        .oneCikanlarKart {
+            height: 500px;
+            width: 80%;
+            background-color: rgba(255, 255, 255, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            margin-left: 10%;
+            border-radius: 15px;
+            box-shadow: inset 0 0 10px 10px rgb(36, 36, 36),
+                0 0 10px 10px rgb(0, 0, 0);
+        }
+
+        .kartlarBaslik {
+            color: #ffff;
+            text-align: center;
+            font-size: xx-large;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .kart {
+            height: 300px;
+            width: 200px;
+
+            text-align: center;
+            box-shadow: 0 0 8px 10px #080808;
+            border-radius: 15px;
+        }
+
+        .KartResim:hover {
+            font-size: xx-large;
+        }
+
+        .kartParagrafi {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-align: center;
+            height: 30px;
+            width: 200px;
+            height: 5vh;
+            background-color: #9fd3db;
+            border-radius: 15px;
+            padding-top: 7px;
+        }
+
+        .kartParagrafi a {
+            color: black;
+            text-decoration: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .kartParagrafi a:hover {
+            text-decoration: underline;
+        }
+
+        .KartResim {
+            height: 300px;
+            width: 200px;
+            border-radius: 10px;
+        }
+
+        .kart:hover {
+            transform: scale(1.05);
+            transition: 0.3s ease-in-out;
+        }
+
+        /*    one cıkan kartlar Bitis*/
+
+        /*footer bölümü başlangıç*/
+        .altBilgiHaritaBölümü {
+            margin-top: 30px;
+            height: 250px;
+            width: 100%;
+            background-color: #151b6e;
+            display: flex;
+            align-items: center;
+            /*dikeyde ort*/
+            justify-content: center;
+            /*yatayda ort*/
+            column-gap: 25px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+            color: #ffff;
+
+
+        }
+
+        .altBilgiHaritaBölümü1 {
+            height: 200px;
+            width: 400px;
+            /* background-color: #FF7F3F; */
+            background-color: #151b6e;
+
+        }
+
+        .altBilgiHaritaBölümü1 ul {
+            list-style: none;
+            line-height: 25px;
+        }
+
+        .altBolumBasliklari {
+            color: rgb(255, 119, 0);
+            font-weight: bolder;
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .altBilgiHaritaBölümü2 {
+            height: 200px;
+            width: 400px;
+            /* background-color: #ec0873; */
+            background-color: #151b6e;
+
+
+        }
+
+        .altBilgiHaritaBölümü3 {
+            height: 200px;
+            width: 400px;
+            /* background-color: #970910; */
+            background-color: #151b6e;
+
+        }
+
+        .telifHaklari {
+            height: 60px;
+            width: 100%;
+            background-color: #201e1e;
+
+
+        }
+
+        .telifHaklari p {
+            text-align: center;
+            line-height: 60px;
+            color: #ffff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+        }
+        .link{
+            color: white;
+            text-decoration: none;
+        }
+        .link:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="menu">
+        <div class="logo">
+            <a href="#"> <img src="logo/logo resmi.png" alt="logo Bulanamadı"></a>
+
+        </div>
+        <ul>
+            <li><a href="AnaSayfa.html">AnaSayfa</a></li>
+            <li><a href="projelerim.html" target="_blank">Projeler</a></li>
+            <li><a href="gelistiriliyor.html">Hakkımızda</a></li>
+            <li><a href="gelistiriliyor.html">İletişim</a></li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <div class="tanitim">
+        <img src="resimler/resim.png" alt="resim Bulanmadı.">
+        <p class="resim_prg"> Byte Core, Hoşgeldin dijital dünyanın temelini oluşturan güçlü ve sürdürülebilir yazılım
+            mimarilerine olan
+            tutkumun bir ürünüdür. Site içerisinde yer alan her bir proje, sadece görsel bir çıktı sunmakla kalmaz; aynı
+            zamanda veri yönetimi, API tasarımı ve sistem güvenliği gibi
+            Amacım, sadece çalışan değil, aynı zamanda temiz, okunabilir ve bakımı kolay kod standartlarını
+            yansıtan çözümler üretmektir. Frontend'deki şıklığı, Backend'deki sağlamlıkla birleştirerek,
+            kullanıcı dostu arayüzlerin arkasında ne kadar güçlü bir mantık olduğunu kanıtlıyorum. Burada
+            geliştirdiğim her araç ve uygulama, karmaşık problemleri basit ve zarif çözümlere dönüştürme felsefemin
+            bir göstergesidir. Sektördeki gelişmeleri yakından takip ederek, projelerime en güncel ve en verimli
+            teknikleri entegre etmeye özen gösteriyorum. Projelerimi İncelemek İçin <a href="projelerim.html"
+                target="_blank">Tıklayınız.</a>
+        </p>
+    </div>
+    <h2 class="kartlarBaslik">Öne Çıkan Projelerimiz</h2>
+    <div class="oneCikanlarKart">
+        <div class="kartKutusu">
+            <div class="kart"><img src="resimler/İstanbulResim.png" alt="Resim Bulanamadı." title="İstanbul" class="KartResim">
+            </div>
+            <p class="kartParagrafi"><a href="projeler/İstanbul/istanbulProjesi.html" target="_blank">Gitmek icin Tıklayın.</a></p>
+        </div>
+        <div class="kartKutusu">
+            <div class="kart"><img src="resimler/bytcore_tanitim_resmi.png" alt="Resim Bulanamadı." title="#" class="KartResim">
+            </div>
+            <p class="kartParagrafi"><a href="gelistiriliyor.html">Geliştiriliyor.</a></p>
+        </div>
+        <div class="kartKutusu">
+            <div class="kart"><img src="resimler/bytcore_tanitim_resmi.png" alt="Resim Bulanamadı." title="#" class="KartResim">
+            </div>
+            <p class="kartParagrafi"><a href="gelistiriliyor.html">Geliştiriliyor.</a></p>
+        </div>
+        <div class="kartKutusu">
+            <div class="kart"><img src="resimler/bytcore_tanitim_resmi.png" alt="Resim Bulanamadı." title="#" class="KartResim">
+            </div>
+            <p class="kartParagrafi"><a href="gelistiriliyor.html">Geliştiriliyor.</a></p>
+        </div>
+
+    </div>
+
+
+    <div class="altBilgiHaritaBölümü">
+        <div class="altBilgiHaritaBölümü1">
+            <h3 class="altBolumBasliklari">Hızlı Erişim</h3>
+            <hr>
+            <ul>
+                <li><a href="AnaSayfa.html" class="link">Ana Sayfa</a></li>
+                <li><a href="projelerim.html" target="_blank" class="link">Tüm Projeler</a></li>
+                <li><a href="gelistiriliyor.html" class="link">Hakkımında</a></li>
+                <li><a href="gelistiriliyor.html" class="link">İletişim</a></li>
+            </ul>
+        </div>
+        <div class="altBilgiHaritaBölümü2">
+            <h3 class="altBolumBasliklari">Beni Takip Edin</h3>
+            <hr>
+            info@bytecore.com
+        </div>
+        <div class="altBilgiHaritaBölümü3">
+            <h3 class="altBolumBasliklari">ByteCore Hakkında</h3>
+            <hr>
+            <p>ByteCore, dijital dünyanın temelini oluşturan, temiz ve sürdürülebilir yazılım çözümlerini sergiler.</p>
+        </div>
+
+
+
+    </div>
+
+    <footer class="telifHaklari">
+        <p>© 2025 ByteCore. Tüm Hakları Saklıdır. | Emre Küçük</p>
+    </footer>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FURKAN'A ÖZEL GİRİŞ</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #000, #1a001a);
+            font-family: 'Arial Black', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        .login-box {
+            background: rgba(20, 0, 20, 0.95);
+            padding: 50px;
+            border-radius: 30px;
+            border: 6px solid #00ff00;
+            box-shadow: 0 0 50px rgba(0, 255, 0, 0.8);
+            width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ff0080;
+            text-shadow: 0 0 20px #ff0080;
+            font-size: 2.8em;
+            margin-bottom: 30px;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            margin: 15px 0;
+            border: none;
+            border-radius: 15px;
+            background: #111;
+            color: #0f0;
+            font-size: 1.3em;
+            text-align: center;
+        }
+
+        input:focus {
+            outline: 4px solid #ff0080;
+            background: #222;
+        }
+
+        button {
+            width: 100%;
+            padding: 18px;
+            background: #00ff00;
+            color: #000;
+            font-size: 1.6em;
+            font-weight: bold;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: 0.4s;
+        }
+
+        button:hover {
+            background: #ff0080;
+            transform: scale(1.05);
+        }
+
+        .error {
+            color: #ff0080;
+            font-size: 1.4em;
+            margin-top: 20px;
+            min-height: 50px;
+            font-weight: bold;
+            text-shadow: 0 0 10px #ff0080;
+        }
+
+        .blink {
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0.3;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-box">
+        <h1 class="blink">FURKAN'A ÖZEL</h1>
+        <h2>GİRİŞ EKRANI</h2>
+
+        <form onsubmit="return checkLogin()">
+            <input type="text" id="username" placeholder="Kullanıcı Adı" autocomplete="off">
+            <input type="password" id="password" placeholder="Şifre" autocomplete="off">
+            <button type="submit">GİRİŞ YAP LAN</button>
+        </form>
+
+        <div class="error" id="error"></div>
+    </div>
+
+    <script>
+        function checkLogin() {
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value;
+            const errorDiv = document.getElementById('error');
+
+            // Doğru kombinasyon: kullanıcı adı BOŞ, şifre = yakisikliadamfurkan
+            if (username === "" && password === "yakisikliadamfurkan") {
+                // Doğru giriş!
+                errorDiv.style.color = "#00ff00";
+                errorDiv.innerHTML = "Hoş geldin yakışıklı... 😏";
+                setTimeout(() => {
+                    window.location.href = "grok.html";
+                }, 1500);
+                return false;
+            }
+            else {
+                // Yanlışsa bayağı gömüyoruz 😂
+                const hatalar = [
+                    "Oğlum sen kimsin lan? Furkan’ın akrabası mısın?",
+                    "Şifre yanlış tabii ki, sen daha Furkan’ı tanımıyorsun ki!",
+                    "Yine mi yanlış? Furkan sana söyleseydi girerdin herhalde.",
+                    "Furkan şu an sana gülüyor haberin olsun.",
+                    "Yeter amk defol git burdan, yakışıklı değilsin belli.",
+                    "Hahahaha yine mi bilemedin? Zeka seviyesi Furkan’la yarışıyor."
+                    
+                ];
+
+                const randomHata = hatalar[Math.floor(Math.random() * hatalar.length)];
+                errorDiv.innerHTML = randomHata;
+                return false;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

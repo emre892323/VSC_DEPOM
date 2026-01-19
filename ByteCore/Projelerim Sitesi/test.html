@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diğer Kişiler (Target/Name Yöntemi)</title>
+    <style>
+        body {
+            background-color: #0D1117;
+            margin: 0;
+            padding: 0;
+            color: #F4F4F9;
+            font-family: sans-serif;
+        }
+
+        /* Ana Kapsayıcı: Menü ve Iframe'i Yan Yana Dizmek İçin */
+        .menuKontrol {
+            display: flex;
+            height: 100vh;
+            width: 100vw;
+            align-items: flex-start;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        /* Sol Dikey Menü Stilleri */
+        .dikeyMenu {
+            width: 100px;
+            background-color: rgb(28, 124, 156);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            row-gap: 15px;
+            box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.7);
+            padding: 15px 0;
+            border-radius: 5px;
+        }
+
+        .kisi {
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+        }
+
+        .kisi a {
+            /* Bağlantının genişliğini ve yüksekliğini kutunun tamamı yapsın */
+            display: block;
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            text-decoration: none;
+        }
+
+        .kisiResmi {
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+            display: block;
+            object-fit: cover; /* Resmin kutuya sığmasını sağlar */
+        }
+
+        .kisiResmi:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 4px 5px rgba(255, 127, 63, 0.7);
+            border-color: #FF7F3F;
+        }
+
+        /* Sağ Iframe Kapsayıcı ve Iframe Stili */
+        .iframe-kapsayici {
+            flex-grow: 1;
+            margin-left: 10px;
+            height: 100%;
+        }
+
+        .web-iframe {
+            width: 100%;
+            height: 100%;
+            /* name="iframe_hedefim" buradaki isme, a etiketindeki target="" eşleşmelidir */
+            border: 1px solid #38c4b8; 
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menuKontrol">
+
+        <div class="dikeyMenu">
+            
+            <div class="kisi">
+                <a href="https://musaprositesi.netlify.app/" target="iframe_hedefim">
+                    <img src="resimler/musa.jpg" alt="Musa" class="kisiResmi" title="Musa">
+                </a>
+            </div>
+
+            <div class="kisi">
+                <a href="https://www.w3schools.com/" target="iframe_hedefim">
+                    <img src="resimler/resim.png" alt="İbrahim" class="kisiResmi" title="İbrahim">
+                </a>
+            </div>
+
+            <div class="kisi">
+                <a href="https://github.com/utku" target="iframe_hedefim">
+                    <img src="resimler/yılan_oyunu.jpg" alt="Utku" class="kisiResmi" title="Utku">
+                </a>
+            </div>
+
+            <div class="kisi">
+                <a href="https://bytecoree.netlify.app/" target="iframe_hedefim">
+                    <img src="resimler/kisiler.png" alt="Emre" class="kisiResmi" title="Emre">
+                </a>
+            </div>
+
+        </div>
+
+        <div class="iframe-kapsayici">
+            <iframe 
+                src="https://musaprositesi.netlify.app/"
+                name="iframe_hedefim" 
+                class="web-iframe"
+                title="Gömülü Web İçeriği">
+            </iframe>
+        </div>
+
+    </div>
+</body>
+
+</html>

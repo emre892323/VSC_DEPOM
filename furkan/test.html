@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FURKAN AYDUK - ENGELLİLER GÜNÜ ÖZEL</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #000000, #1a001a);
+            color: #fff;
+            font-family: 'Arial Black', Arial, sans-serif;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: #000;
+            padding: 30px;
+            text-align: center;
+            border-bottom: 8px solid #00ff00;
+            box-shadow: 0 0 30px #00ff00;
+        }
+
+        .header h1 {
+            font-size: 4.5vw;
+            color: #00ff00;
+            text-shadow: 0 0 20px #00ff00;
+            margin: 0;
+            letter-spacing: 5px;
+            animation: blink 1.2s infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0.4;
+            }
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 30px;
+            background: rgba(20, 0, 20, 0.97);
+            border: 6px solid #00ff00;
+            border-radius: 30px;
+            box-shadow: 0 0 50px rgba(0, 255, 0, 0.7);
+        }
+
+        .furkan {
+            font-size: 6vw;
+            color: #ff0080;
+            text-align: center;
+            text-transform: uppercase;
+            margin: 20px 0;
+            text-shadow: 4px 4px #000;
+        }
+
+        /* Otomatik değişen büyük fotoğraf */
+        .slider {
+            width: 80%;
+            max-width: 700px;
+            margin: 30px auto;
+            border: 8px solid #ff0080;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 0 30px #ff0080;
+        }
+
+        .slider img {
+            width: 100%;
+            display: none;
+            border-radius: 15px;
+        }
+
+        .slider img.active {
+            display: block;
+            animation: zoom 8s infinite;
+        }
+
+        @keyframes zoom {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.12);
+            }
+        }
+
+        /* Küçük thumbnail resimler */
+        .thumbnails {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .thumbnails img {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border: 5px solid #00ff00;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .thumbnails img:hover {
+            transform: scale(1.2);
+            border-color: #ff0080;
+        }
+
+        p {
+            font-size: 1.9vw;
+            line-height: 1.8;
+            padding: 18px;
+            background: rgba(0, 0, 0, 0.7);
+            border-left: 10px solid #ff0080;
+            margin: 25px 0;
+        }
+
+        .sokma {
+            color: #00ff00;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 2.5vw;
+            color: #ff0080;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>3 ARALIK DÜNYA ENGELLİLER GÜNÜ KUTLU OLSUN!</h1>
+    </div>
+
+    <div class="container">
+        <h1 class="furkan">FURKAN AYDUK</h1>
+
+        <!-- Büyük otomatik slayt -->
+        <div class="slider">
+            <img src="resimler/furkanResim1.jpg" class="active">
+            <img src="resimler/furkanResim2.jpg">
+            <img src="resimler/furkanResim3.jpg">
+            <img src="resimler/furkanResim4.jpg">
+        </div>
+
+        <!-- Küçük thumbnail resimler (tıklanınca büyük değişsin) -->
+        <div class="thumbnails">
+            <img src="resimler/furkanResim1.jpg" onclick="changeSlide(0)">
+            <img src="resimler/furkanResim2.jpg" onclick="changeSlide(1)">
+            <img src="resimler/furkanResim3.jpg" onclick="changeSlide(2)">
+            <img src="resimler/furkanResim4.jpg" onclick="changeSlide(3)">
+        </div>
+
+        <p>Sevgili <span class="sokma">Furkan Ayduk</span>, Engelliler Günün kutlu olsun kanka…</p>
+        <p>Yani fiziksel mi ruhsal mı tartışılır ama <span class="sokma">resimlere bakınca ikisi de var gibi</span> aq.
+        </p>
+        <p>Bu fotoğraflara bakıp bakıp “ulan ben neymişim be” diyorsundur şimdi. Haklısın, <span
+                class="sokma">efsanesin</span>.</p>
+        <p>Dört fotoğrafın dördü de ayrı komik ya… Hangisini çerçeveletip başucuna assan diye düşünüyorsundur. Hepsi
+            olur kral!</p>
+        <p>Nasıl olsa <span class="sokma">oturmaktan bıkmadın</span>, rahat rahat izle bu siteyi. Biz senin için yaptık,
+            biraz da gülelim diye.</p>
+        <p>Seni seven, ama bayağı da <span class="sokma">gömmen</span> arkadaşların.</p>
+    </div>
+
+    <footer>
+        ❤️ Furkan Ayduk 2025 Özel Koleksiyonu ❤️<br>
+        <span style="color:#00ff00;">Engel değil, başlı başına engeller paketi!</span>
+    </footer>
+
+    <script>
+        let current = 0;
+        const slides = document.querySelectorAll('.slider img');
+
+        function nextSlide() {
+            slides[current].classList.remove('active');
+            current = (current + 1) % slides.length;
+            slides[current].classList.add('active');
+        }
+
+        function changeSlide(n) {
+            slides[current].classList.remove('active');
+            current = n;
+            slides[current].classList.add('active');
+        }
+
+        // Her 5 saniyede bir otomatik geçsin
+        setInterval(nextSlide, 5000);
+    </script>
+
+</body>
+
+</html>

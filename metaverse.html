@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Metaverse — Gelecek, Teknolojiler ve Hazırlık</title>
+    <meta name="description"
+        content="Metaverse nedir, hangi teknolojilerle çalışır, hayatımızı nasıl etkiler ve geleceğe nasıl hazırlanmalıyız? Tek sayfalık rehber." />
+    <!-- Sistemdeki güvenli font kombinasyonu; Google Fonts gerekmiyor -->
+    <style>
+        /* ====== Temel stil ve reset ====== */
+        :root {
+            --bg: #0f1724;
+            --card: #0b1220;
+            --glass: rgba(255, 255, 255, 0.03);
+            --accent1: linear-gradient(135deg, #7C3AED, #06B6D4);
+            --accent2: linear-gradient(135deg, #06B6D4, #7C3AED);
+            --muted: #9aa6b2;
+            --glass-border: rgba(255, 255, 255, 0.04);
+            --radius: 14px;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            height: 100%
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            color: #e6eef7;
+            background:
+                radial-gradient(1000px 600px at 10% 10%, rgba(124, 58, 237, 0.06), transparent 10%),
+                radial-gradient(800px 500px at 90% 90%, rgba(6, 182, 212, 0.04), transparent 10%),
+                var(--bg);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 1.5;
+            padding-bottom: 60px;
+        }
+
+        /* ====== Container & layout ====== */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 32px;
+        }
+
+        /* ====== Nav ====== */
+        header {
+            position: sticky;
+            top: 14px;
+            z-index: 40;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.00));
+            backdrop-filter: blur(6px);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .logo {
+            width: 46px;
+            height: 46px;
+            border-radius: 10px;
+            background: var(--accent1);
+            display: grid;
+            place-items: center;
+            font-weight: 700;
+            box-shadow: 0 6px 24px rgba(7, 11, 21, 0.6);
+        }
+
+        .brand h1 {
+            font-size: 16px;
+            margin: 0
+        }
+
+        .links {
+            display: flex;
+            gap: 12px;
+            align-items: center
+        }
+
+        nav a {
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 14px;
+            padding: 8px 10px;
+            border-radius: 8px;
+        }
+
+        nav a:hover {
+            color: #fff;
+            background: var(--glass)
+        }
+
+        /* ====== Hero ====== */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 28px;
+            align-items: center;
+            margin-bottom: 28px;
+        }
+
+        .hero-card {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0));
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius);
+            padding: 28px;
+            box-shadow: 0 10px 30px rgba(2, 6, 23, 0.6);
+        }
+
+        .kicker {
+            display: inline-block;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: rgba(124, 58, 237, 0.12);
+            color: #cdb9ff;
+            font-weight: 600;
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+
+        .hero h2 {
+            margin: 0 0 12px 0;
+            font-size: 28px;
+            line-height: 1.05
+        }
+
+        .lead {
+            color: var(--muted);
+            margin-bottom: 18px
+        }
+
+        .cta-row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 14px;
+            border-radius: 10px;
+            font-weight: 600;
+            text-decoration: none;
+            background-image: var(--accent1);
+            color: #061121;
+            border: box;
+            box-shadow: 0 6px 18px rgba(7, 11, 21, 0.6);
+        }
+
+        .btn-ghost {
+            color: #d8e6f2;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            background: transparent;
+            padding: 10px 14px;
+            border-radius: 10px;
+        }
+
+        /* Hero visual card (sağ) */
+        .visual {
+            border-radius: var(--radius);
+            padding: 18px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.00));
+            border: 1px solid var(--glass-border);
+            min-height: 220px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .vis-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .chip {
+            background: var(--card);
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 12px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.02)
+        }
+
+        .big-chip {
+            grid-column: span 3;
+            padding: 14px;
+            font-weight: 600
+        }
+
+        /* ====== Sections ====== */
+        section {
+            margin: 22px 0
+        }
+
+        .section-title {
+            display: flex;
+            align-items: end;
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+
+        .section-title h3 {
+            margin: 0;
+            font-size: 18px
+        }
+
+        .muted {
+            color: var(--muted);
+            font-size: 14px
+        }
+
+        /* Grid of cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .card {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0));
+            border-radius: 12px;
+            padding: 18px;
+            border: 1px solid var(--glass-border);
+            min-height: 120px;
+        }
+
+        .card h4 {
+            margin: 0 0 8px 0
+        }
+
+        .card p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 14px
+        }
+
+        /* Timeline (CSS-only) */
+        .timeline {
+            position: relative;
+            padding-left: 28px;
+        }
+
+        .timeline:before {
+            content: "";
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(#06b6d4, #7c3aed);
+            border-radius: 6px;
+        }
+
+        .event {
+            position: relative;
+            padding: 14px 14px 14px 28px;
+            margin-bottom: 14px;
+            background: var(--glass);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.02)
+        }
+
+        .event:before {
+            content: "";
+            position: absolute;
+            left: -18px;
+            top: 20px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #0b1220;
+            border: 4px solid #09111a;
+            box-shadow: 0 4px 18px rgba(7, 11, 21, 0.6), inset 0 2px 6px rgba(255, 255, 255, 0.02);
+        }
+
+        .event h5 {
+            margin: 0 0 6px 0;
+            font-size: 15px
+        }
+
+        .event p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 14px
+        }
+
+        /* Accordion (CSS-only using checkbox hack) */
+        .accordion-item {
+            border-radius: 10px;
+            border: 1px solid var(--glass-border);
+            overflow: hidden;
+            background: var(--card)
+        }
+
+        .accordion-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 16px;
+            cursor: pointer;
+        }
+
+        .accordion-head strong {
+            font-size: 15px
+        }
+
+        .accordion-head .hint {
+            color: var(--muted);
+            font-size: 13px
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 16px;
+            transition: max-height .38s cubic-bezier(.2, .9, .2, 1);
+            color: var(--muted);
+            font-size: 14px;
+            padding-bottom: 0;
+        }
+
+        input[type="checkbox"] {
+            display: none
+        }
+
+        input[type="checkbox"]:checked+.accordion-head+.accordion-content {
+            max-height: 400px;
+            padding: 12px 16px 18px 16px
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 30px;
+            padding: 18px;
+            border-radius: 12px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0));
+            border: 1px solid var(--glass-border)
+        }
+
+        .footer-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap
+        }
+
+        .small {
+            font-size: 13px;
+            color: var(--muted)
+        }
+
+        /* Responsive */
+        @media (max-width:980px) {
+            .hero {
+                grid-template-columns: 1fr;
+                padding-bottom: 6px
+            }
+
+            .grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .visual {
+                order: -1
+            }
+        }
+
+        @media (max-width:640px) {
+            .grid {
+                grid-template-columns: 1fr
+            }
+
+            nav a {
+                display: none
+            }
+
+            header {
+                padding: 10px
+            }
+
+            .brand h1 {
+                font-size: 15px
+            }
+
+            .hero h2 {
+                font-size: 22px
+            }
+        }
+
+        /* Small touches */
+        .tag {
+            display: inline-block;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.03);
+            font-size: 13px;
+            color: var(--muted)
+        }
+
+        .kpi-row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap
+        }
+
+        .kpi {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0));
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.02);
+            min-width: 120px
+        }
+
+        .kpi h6 {
+            margin: 0;
+            font-size: 13px;
+            color: var(--muted)
+        }
+
+        .kpi b {
+            display: block;
+            font-size: 18px;
+            margin-top: 6px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+            <div class="nav">
+                <div class="brand">
+                    <div class="logo">MV</div>
+                    <div>
+                        <h1>Metaverse Rehberi</h1>
+                        <div class="small">Kısa, net ve geleceğe hazır</div>
+                    </div>
+                </div>
+                <div class="links">
+                    <nav>
+                        <a href="#nedir">Nedir?</a>
+                        <a href="#teknolojiler">Teknolojiler</a>
+                        <a href="#uygulamalar">Uygulamalar</a>
+                        <a href="#gelecek">Gelecek</a>
+                        <a href="#hazırlık">Hazırlık</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- HERO -->
+            <div class="hero">
+                <div class="hero-card">
+                    <span class="kicker">Geleceğin Dijital Katmanı</span>
+                    <h2>Metaverse nedir ve hayatımızı nasıl değiştirebilir?</h2>
+                    <p class="lead">Metaverse, fiziksel ve dijital dünyaların kesiştiği; gerçek zamanlı, sürekli
+                        etkileşimli sanal ortamların genel adıdır. Oyun, iş, eğitim, sağlık ve sosyal yaşamda yeni bir
+                        katman oluşturur.</p>
+
+                    <div class="kpi-row" style="margin-bottom:16px;">
+                        <div class="kpi">
+                            <h6>Öne çıkan</h6><b>3 boyutlu etkileşim</b>
+                        </div>
+                        <div class="kpi">
+                            <h6>Temel</h6><b>VR / AR / Blockchain</b>
+                        </div>
+                        <div class="kpi">
+                            <h6>Fırsat</h6><b>Sanal ekonomi</b>
+                        </div>
+                    </div>
+
+                    <div class="cta-row">
+                        <a class="btn" href="#uygulamalar">Uygulamalara Bak</a>
+                        <a class="btn-ghost" href="#hazırlık">Nasıl Hazırlanırım?</a>
+                    </div>
+                </div>
+
+                <aside class="visual" aria-hidden="true">
+                    <div class="vis-grid">
+                        <div class="chip">Sanal Toplantılar</div>
+                        <div class="chip">Eğitim Simülasyonları</div>
+                        <div class="chip">NFT & Ekonomi</div>
+                        <div class="chip">Uzaktan Çalışma</div>
+                        <div class="chip">Sanal Konserler</div>
+                        <div class="chip">3D Sosyal Ağlar</div>
+                        <div class="big-chip">Hibrit Gerçeklik: AR ⇄ VR</div>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- Nedir -->
+            <section id="nedir">
+                <div class="section-title">
+                    <h3>Nedir?</h3>
+                    <div class="muted">Temel tanım ve mantık</div>
+                </div>
+                <div class="card" style="margin-bottom:12px">
+                    <h4>Basitçe:</h4>
+                    <p>Metaverse tek bir platform değil; birbirine bağlı, kalıcı, 3B veya AR tabanlı dijital alanların
+                        bütünüdür. Kullanıcılar avatarlarla dolaşır, ekonomiye katılır ve içerik üretir.</p>
+                </div>
+
+                <div class="grid" style="margin-top:12px">
+                    <div class="card">
+                        <h4>Çoklu ortam</h4>
+                        <p>VR (tam sürükleyici), AR (gerçek dünya üzerine katmanlar), ve 3D web birleşir.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Sürekli ve eş zamanlı</h4>
+                        <p>Oyun gibi geçici olmayan, her an erişilebilen dijital alanlardır.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Kullanıcı merkezli ekonomi</h4>
+                        <p>Dijital mallar, NFT'ler, hizmetler ve sanal gayrimenkul gibi varlıklar ön plandadır.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Teknolojiler -->
+            <section id="teknolojiler">
+                <div class="section-title">
+                    <h3>Temel Teknolojiler</h3>
+                    <div class="muted">Metaverse'in altyapısı</div>
+                </div>
+
+                <div class="grid">
+                    <div class="card">
+                        <h4>1. VR & AR</h4>
+                        <p>Sanal gerçeklik başlıkları (VR) ve artırılmış gerçeklik (AR) görselliği sağlar; mobil AR da
+                            erişim kolaylığı getirir.</p>
+                    </div>
+                    <div class="card">
+                        <h4>2. 3D Motorlar & Web3D</h4>
+                        <p>Unity, Unreal, WebGL ve WebXR tipik araçlardır; tarayıcı tabanlı 3D deneyimler web için
+                            kritik.</p>
+                    </div>
+                    <div class="card">
+                        <h4>3. Blockchain & NFT</h4>
+                        <p>Varlık sahipliği, transfer ve ekonomiyi güvenceleyen dağıtık defter çözümleri.</p>
+                    </div>
+                    <div class="card">
+                        <h4>4. Bulut & Edge Compute</h4>
+                        <p>Gerçek zamanlı, düşük gecikmeli deneyimler için güçlü sunucular ve edge konumlar gereklidir.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h4>5. AI & İçerik Üretimi</h4>
+                        <p>3B içerik otomasyonu, ses/tanımlama, NPC davranışları ve kişiselleştirilmiş deneyimler yapay
+                            zekâ ile desteklenir.</p>
+                    </div>
+                    <div class="card">
+                        <h4>6. Ağ & Standartlar</h4>
+                        <p>İnteroperability (taşınabilir avatarlar, varlıklar) için ortak protokoller gereklidir.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Uygulamalar -->
+            <section id="uygulamalar">
+                <div class="section-title">
+                    <h3>Uygulamalar</h3>
+                    <div class="muted">Günlük hayatta nerelerde karşımıza çıkacak?</div>
+                </div>
+
+                <div class="grid">
+                    <div class="card">
+                        <h4>Oyun</h4>
+                        <p>Sosyal oyun deneyimleri, kullanıcı üretilen içerik, esports ve sanal eşyalar.</p>
+                    </div>
+                    <div class="card">
+                        <h4>İş & Toplantılar</h4>
+                        <p>3D toplantı salonları, etkileşimli sunumlar, simülasyon tabanlı eğitim.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Eğitim</h4>
+                        <p>Gerçekçi simülasyonlar, laboratuvarlar ve tarihsel ortamların canlandırılması.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Sağlık</h4>
+                        <p>Tedavi simülasyonları, rehabilitasyon, uzaktan terapi ve medikal eğitim.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Ticaret</h4>
+                        <p>Sanal mağazalar, ürün deneme (AR ile), dijital sahiplik ve abonelik hizmetleri.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Sosyal & Kültür</h4>
+                        <p>Sanal konserler, sanat galerileri ve küresel topluluk etkinlikleri.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Gelecek ve timeline -->
+            <section id="gelecek">
+                <div class="section-title">
+                    <h3>Gelecek: Neler Bekliyor?</h3>
+                    <div class="muted">Kısa ve orta vadeli olası gelişmeler</div>
+                </div>
+
+                <div class="timeline">
+                    <div class="event">
+                        <h5>Kısa vadede (1–3 yıl)</h5>
+                        <p>AR uygulamaları ve hibrit deneyimler yaygınlaşacak; 3D toplantılar ve pazaryerleri büyüyecek.
+                        </p>
+                    </div>
+                    <div class="event">
+                        <h5>Orta vadede (3–7 yıl)</h5>
+                        <p>Daha iyi donanım (daha hafif başlıklar), düşük gecikmeli bulut oyunları ve varlıkların
+                            taşınabilirliği önem kazanacak.</p>
+                    </div>
+                    <div class="event">
+                        <h5>Uzun vadede (7+ yıl)</h5>
+                        <p>Gerçek dünya ile sanal arasında hatlar daha da bulanıklaşacak; ekonomik ve yasal çerçeveler
+                            evrilecek.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Riskler & Etik -->
+            <section>
+                <div class="section-title">
+                    <h3>Riskler & Etik</h3>
+                    <div class="muted">Dikkat edilmesi gereken önemli noktalar</div>
+                </div>
+
+                <div class="grid">
+                    <div class="card">
+                        <h4>Mahremiyet</h4>
+                        <p>Toplanan veriler (göz takibi, hareket) hassastır; kötü amaçlı kullanıma açıktır.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Erişim Eşitsizliği</h4>
+                        <p>Donanım ve bağlantı gereksinimleri nedeniyle dijital bölünme riskleri.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Yasal Düzenlemeler</h4>
+                        <p>Mülkiyet, vergi, içerik ve sorumluluk konuları hızlıca netleşmelidir.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hazırlık -->
+            <section id="hazırlık">
+                <div class="section-title">
+                    <h3>Nasıl Hazırlanmalı?</h3>
+                    <div class="muted">Bireyler ve şirketler için pratik öneriler</div>
+                </div>
+
+                <div class="card" style="margin-bottom:14px">
+                    <h4>Bireyler için</h4>
+                    <p>3D ve Unity/Unreal temelleri öğren, AR/VR deneyimleri dene, dijital varlıklar ve temel blockchain
+                        bilgisi edin.</p>
+                </div>
+
+                <div class="grid">
+                    <div class="card">
+                        <h4>Geliştiriciler</h4>
+                        <p>WebXR, Three.js, Unity, networking, gerçek zamanlı iletişim (WebRTC) öğrenin.</p>
+                    </div>
+                    <div class="card">
+                        <h4>İşletmeler</h4>
+                        <p>Müşteri deneyimlerini AR/VR ile test edin, pilot projeler yapın, veri güvenliğine yatırım
+                            yapın.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Eğitimciler</h4>
+                        <p>Simülasyon tabanlı öğrenme materyalleri geliştirin, etkileşimli içerik üretmeye başlayın.</p>
+                    </div>
+                </div>
+
+                <!-- Accordion sık sorulanlar (CSS-only) -->
+                <div style="margin-top:16px;display:grid;gap:10px">
+                    <div class="accordion-item">
+                        <input type="checkbox" id="a1" />
+                        <label class="accordion-head" for="a1"><strong>Metaverse herkes için mi olacak?</strong><span
+                                class="hint">Kısa cevap: Hayır, ama erişim büyüyor.</span></label>
+                        <div class="accordion-content">
+                            <p>Ticari ve teknik engeller nedeniyle herkes aynı hızda dahil olmayabilir. Ancak mobil ve
+                                AR deneyimleri erişimi artıracak.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <input type="checkbox" id="a2" />
+                        <label class="accordion-head" for="a2"><strong>NFT'ler gerekli mi?</strong><span
+                                class="hint">Kısa cevap: Bir araç, zorunluluk değil.</span></label>
+                        <div class="accordion-content">
+                            <p>NFT'ler dijital mülkiyet sağlarken merkeziyetsiz çözümler her zaman tek seçenek
+                                olmayabilir. Regülasyonlar ve çevresel kaygılar tartışılıyor.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Kaynakça & İleri okuma -->
+            <section>
+                <div class="section-title">
+                    <h3>Kaynaklar & İleri Okuma</h3>
+                    <div class="muted">Bu sitenin içeriği öğrenme amaçlıdır; güncel gelişmeleri takip et.</div>
+                </div>
+
+                <div class="card">
+                    <h4>Başlangıç için öneriler</h4>
+                    <p class="muted">Arama motorunda "WebXR tutorial", "Unity VR tutorial", "Introduction to AR
+                        development", "Blockchain basics" gibi anahtar kelimelerle başlamanı öneririm. Ayrıca üniversite
+                        dersleri ve çevrimiçi kurslar (Coursera, Udacity, freeCodeCamp) faydalıdır.</p>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <div class="footer-row">
+                <div>
+                    <div style="font-weight:700">Metaverse Rehberi</div>
+                    <div class="small">Bilgilendirme amaçlı tek sayfalık örnek site — kodu düzenleyebilir ve
+                        genişletebilirsin.</div>
+                </div>
+                <div style="text-align:right">
+                    <div class="small">Hazırlayan: Sen — <span class="tag">Düzenle & Paylaş</span></div>
+                    <div style="margin-top:8px" class="small">© <span id="year"></span></div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- minimal inline script sadece tarih için (isteğe bağlı) -->
+    <script>
+        // Bu tek satır JS yalnızca footer yılını güncellemek içindir.
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

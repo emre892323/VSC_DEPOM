@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projelerim</title>
+    <style>
+        /*Scroll Bar Özelleştirme Kodları*/
+        ::-webkit-scrollbar {
+            /* 🔥 YENİ: Koyu mor/lila tonu */
+            background-color: #2C2F63; 
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            /* 🔥 YENİ: Canlı Mor */
+            background-color: #A557A8; 
+            border-radius: 25px;
+            /* 🔥 YENİ: Mor kenarlık */
+            border: 3px solid #7D497E; 
+        }
+
+        /*Scroll Bar Özelleştirme Kodları Bitişi*/
+        body {
+            /* 🔥 YENİ: Koyu Gece Mavisi */
+            background-color: #1A1C3F; 
+            margin: 0;
+            padding: 0;
+        }
+
+        .baslik {
+            /* 🔥 YENİ: Koyu Mor */
+            background-color: #2C2F63; 
+            width: 100%;
+            height: 70px;
+            text-align: center;
+            line-height: 60px;
+            font-family: Arial, Helvetica, sans-serif;
+            /* 🔥 YENİ: Altın Sarısı */
+            color: #FFD700; 
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        .projeler {
+            /* 🔥 YENİ: Ana Arka Plan */
+            background-color: #1A1C3F; 
+            min-height: calc(100vh - 70px);
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 50px;
+            text-align: center;
+        }
+
+        .projem1 {
+            height: 200px;
+            width: 200px;
+            /* 🔥 YENİ: Koyu Mor */
+            background-color: #2C2F63; 
+            border-radius: 25px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center
+        }
+
+        /*incele*/
+        .projem1 a {
+            position: relative;
+            display: block;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 25px;
+        }
+
+        .proje_adi {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            /* 🔥 YENİ: Mor/Lila Gölge */
+            text-shadow: 1px 1px 10px #A557A8; 
+            font-size: larger;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            color: white;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+            border-radius: 25px;
+        }
+
+        .projem1:hover .proje_adi {
+            opacity: 1;
+        }
+
+        /*İnceleme bitir*/
+
+        .projem1 a img {
+            height: 200px;
+            width: 200px;
+            border-radius: 25px;
+        }
+
+        .projem1:hover {
+            /* 🔥 YENİ: Parlak Kırmızı/Pembe Gölge */
+            box-shadow: 0 0 15px 6px #FC6666; 
+        }
+
+        /* 🔥 ÖNEMLİ: Menüdeki hover'ı da güncelledim */
+        .baslik:hover {
+            color: #FC6666; /* Pembe vurgu */
+            text-shadow: 0 0 5px #FFD700;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="baslik">
+        <h1>Arkadaşlık İstekleri</h1>
+    </div>
+    <div class="projeler">
+
+        <div class="projem1"><a href="#"><img src="resimler/ClashRoyale.png" alt="Resim Bulanamadı."><span class="proje_adi">Clash Royale</span></a></div>
+        <div class="projem1"><a href=""><img src="resimler/pugh.png" alt="Resim Bulanamadı."><span class="proje_adi">Pugh</span></a></div>
+        <div class="projem1"><a href="https://link.brawlstars.com/invite/friend/tr?tag=2Y0QPP90L&token=k83bkffk" target="_blank"><img src="resimler/BrawlStars.png" alt="Resim Bulanamadı."><span class="proje_adi">Brawl Stars</span></a></div>
+        <div class="projem1"><a href="#"><img src="resimler/HayDay.png" alt="Resim Bulanamadı."><span class="proje_adi">Hayday</span></a></div>
+        <div class="projem1"><a href="#"><img src="resimler/kafatopu2.jpg" alt="Resim Bulanamadı."><span class="proje_adi">KafaTopu 2</span></a></div>
+        <div class="projem1"><a href="#"><img src="https://testerwebb.netlify.app/" target="_blank" alt="Resim Bulanamadı."><span class="proje_adi">Emrenin Sitesi</span></a></div>
+        <div class="projem1"><a href="#"><img src="#" alt="Resim Bulanamadı."><span class="proje_adi">#</span></a></div>
+        <div class="projem1"><a href="#"><img src="#" alt="Resim Bulanamadı."><span class="proje_adi">#</span></a></div>
+        <div class="projem1"><a href="#"><img src="#" alt="Resim Bulanamadı."><span class="proje_adi">#</span></a></div>
+        <div class="projem1"><a href="#"><img src="#" alt="Resim Bulanamadı."><span class="proje_adi">#</span></a></div>
+
+    </div>
+
+
+    <!--!NOTLAR-->
+    <!--todo Her oyun için ayrı kart sayfa tasarla-->
+    <!--todo Yan hesaplar için login sayfası tasarla-->
+    <!--todo tasarımı degistir farklı tasarim olsun-->
+    <!--!NOTLAE BİTTİ NOTLARI DİKKATE AL-->
+    
+</body>
+
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engelsiz Kalplere Selam Olsun</title>
+    
+    <style>
+        /* Genel Sıfırlama ve Erişilebilirlik Ayarları */
+        body {
+            font-family: 'Arial', sans-serif; /* Okunaklı font */
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9; /* Açık ve nötr arka plan */
+            color: #333; /* Yüksek kontrastlı metin */
+            font-size: 16px; 
+            transition: background-color 0.3s, color 0.3s; /* Geçiş efekti */
+        }
+
+        /* Yüksek Kontrast Modu */
+        body.high-contrast {
+            background-color: #000; /* Siyah arka plan */
+            color: #ff0; /* Parlak sarı metin */
+        }
+        body.high-contrast a, body.high-contrast .logo, body.high-contrast h1, body.high-contrast h2, body.high-contrast h3 {
+            color: #0f0; /* Yeşil başlık ve linkler */
+        }
+        body.high-contrast main {
+             background: #111; /* Koyu gri main arka plan */
+             box-shadow: none;
+        }
+
+        /* Ana İçeriğe Atla Linki (Skip Link) - Erişilebilirlik için kritik */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #007bff;
+            color: white;
+            padding: 8px;
+            z-index: 100;
+        }
+        .skip-link:focus {
+            top: 0; /* Klavye ile focuslandığında görünür olur */
+        }
+
+        /* Header ve Logo */
+        header {
+            background-color: #007bff; /* Mavi tonu */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .logo {
+            font-size: 2.2em;
+            margin: 0;
+        }
+
+        /* Ana İçerik */
+        main {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background: white; /* Mesaj bölümünü vurgulamak için */
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Bölüm Başlıkları ve Mesajlar */
+        h2, h3 {
+            color: #007bff;
+            text-align: center;
+            margin-top: 0;
+        }
+        .hero-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .date {
+            font-weight: bold;
+            color: #555;
+        }
+        .message-section p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        .message-section strong {
+            color: #ff5722; /* Vurgu rengi */
+        }
+        .signature {
+            text-align: right;
+            font-style: italic;
+            font-weight: 600;
+        }
+
+        /* Galeri ve Görsel */
+        .gallery-section {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .gallery-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 3px solid #ccc;
+        }
+        .caption {
+            font-size: 0.9em;
+            color: #777;
+            margin-top: 10px;
+        }
+
+        /* Kontrast Butonu */
+        #contrast-toggle {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #28a745; /* Yeşil buton */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        #contrast-toggle:hover, #contrast-toggle:focus {
+            background-color: #1e7e34;
+            outline: 3px solid orange; /* Klavye ile erişimde belirgin odak */
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 0.9em;
+        }
+
+        /* Odak Durumu (Focus) - Klavye Erişimi için */
+        a:focus, button:focus, [tabindex="-1"]:focus {
+            outline: 3px solid #ffc107; /* Sarı odak çerçevesi */
+        }
+    </style>
+</head>
+<body>
+    <header role="banner">
+        <a href="#main-content" class="skip-link">Ana İçeriğe Atla</a>
+        <h1 class="logo">✨ Engelsiz Dostluk ✨</h1>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+        <section class="hero-section">
+            <h2>Seninle Her Gün Engelsiz, Sevgili [Arkadaşının Adı]!</h2>
+            <p class="date">3 Aralık Dünya Engelliler Günü Kutlu Olsun</p>
+        </section>
+
+        <section class="message-section">
+            <p>Sevgili Dostum,</p>
+            <p>Bu özel gün vesilesiyle sana şunu bir kez daha söylemek istedim: Hayat seninle daha **renkli** ve daha **anlamlı**.</p>
+            <p>Senin azmin, neşen ve güçlü duruşun; çevrendeki tüm engelleri aşmanın sadece bir **bakış açısı** meselesi olduğunu bize her zaman gösteriyor.</p>
+            <p>İyi ki varsın, iyi ki hayatımdasın! Seninle kurduğumuz dostluk, benim için en büyük hediyedir.</p>
+            <p class="signature">Kocaman sevgilerimle,</p>
+            <p class="signature">[Senin Adın]</p>
+        </section>
+
+        <section class="gallery-section">
+            <h3>En Güzel Anılarımızdan...</h3>
+            <img src="https://via.placeholder.com/600x400.png?text=Birlikte+Çekilmiş+Mutlu+Fotoğrafınız" 
+                 alt="[Arkadaşının Adı] ve [Senin Adın]'ın gülerken çekilmiş, samimi bir fotoğrafı." 
+                 loading="lazy">
+            <p class="caption">Gülüşlerimizin hiç eksik olmadığı o güzel günden bir kare.</p>
+        </section>
+        
+        <button id="contrast-toggle" aria-label="Yüksek Kontrast Modunu Aç/Kapat">Kontrastı Değiştir</button>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2025 - Engelsiz Kalpler Projesi</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleButton = document.getElementById('contrast-toggle');
+            const body = document.body;
+
+            // Kontrast modunu değiştiren işlev
+            function toggleContrast() {
+                body.classList.toggle('high-contrast');
+                
+                // Kullanıcının tercihini kaydet (isteğe bağlı)
+                if (body.classList.contains('high-contrast')) {
+                    localStorage.setItem('contrastMode', 'high');
+                } else {
+                    localStorage.removeItem('contrastMode');
+                }
+            }
+
+            // Butona tıklama olayını ekle
+            if (toggleButton) {
+                toggleButton.addEventListener('click', toggleContrast);
+            }
+
+            // Sayfa yüklendiğinde daha önceki tercihi kontrol et
+            if (localStorage.getItem('contrastMode') === 'high') {
+                body.classList.add('high-contrast');
+            }
+        });
+    </script>
+</body>
+</html>

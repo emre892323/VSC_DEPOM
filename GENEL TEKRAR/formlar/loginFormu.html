@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            background-color: rgb(131, 131, 131);
+            height: 100vh;
+        }
+
+        form {
+            background-color: rgb(51, 85, 85);
+            height: 400px;
+            width: 400px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            border-radius: 25px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            background-color: rgb(204, 204, 204);
+            padding: 15px;
+            color: #ffff;
+            border-radius: 10px;
+            border: 2px solid red;
+        }
+
+        input[type="submit"] {
+
+            background-color: lightblue;
+            border-radius: 25px;
+            padding: 10px 50px 10px 50px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+            font-weight: bold;
+        }
+
+        label {
+            color: #f0f0f0;
+            font-weight: bold;
+
+        }
+        ::placeholder{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="iletisim.form.html">
+        <label for="username">Kullanıcı Adı:</label>
+        <input type="text" id="username" required minlength="3" placeholder="Kullanıcı Adı Girin">
+
+        <label for="password">Şifre:</label>
+
+        <input type="password" id="password" required minlength="6" placeholder="şifrenizi girin">
+
+
+
+        <input type="submit" value="Giriş Yap" onclick="prompt('lütfen şifre giriniz')">
+
+    </form>
+</body>
+
+</html>

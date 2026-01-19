@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOG-İN Sayfası</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #121212;
+    }
+
+    .giris_ekrani {
+        background-color: #585858;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: calc(100vh - 100px);
+    }
+
+    .giris_formu {
+        background-color: #263859;
+        height: 300px;
+        width: 300px;
+    }
+</style>
+
+<body>
+    <div class="giris_ekrani">
+
+        <h2 class="form-baslik">ByteCore Giriş Yap</h2>
+
+        <form class="giris-formu">
+
+            <div class="form-grubu">
+                <label for="kullanici_Adi">Kullanıcı Adı:</label>
+                <input type="text" id="kullanici_Adi" placeholder="Kullanıcı Adınızı Giriniz." required>
+            </div>
+
+            <div class="form-grup">
+                <label for="kullanici_sifre">Şifre</label>
+                <input type="password" id="kullanici_sifre" placeholder="Şifrenizi Girin." required>
+            </div>
+
+            <button type="submit" class="giris-btn">Giriş Yap</button>
+
+        </form>
+
+    </div>
+</body>
+
+</html>

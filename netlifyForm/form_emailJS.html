@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim Formu</title>
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // EmailJS Kullanıcı ID'niz
+            emailjs.init("G9Rq5yA2SNgQOdsJp");
+        })();
+    </script>
+    <style>
+        :root {
+            --primary-color: #FF7F3F;
+            --accent-color: #38c4b8;
+            --bg-dark: #0D1117;
+            --card-bg: rgba(28, 124, 156, 0.15);
+            --input-bg: #121212;
+            --text-light: #F4F4F9;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 500px;
+            padding: 40px;
+            border-radius: 16px;
+            background-color: var(--card-bg);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h1 {
+            color: var(--accent-color);
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1.5px solid #1D2B53;
+            border-radius: 8px;
+            background-color: var(--input-bg);
+            color: var(--text-light);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 8px rgba(56, 196, 184, 0.3);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 140px;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background-color: var(--primary-color);
+            color: #000;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.3s;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #ff955f;
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        button:disabled {
+            background-color: #444;
+            color: #888;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        #status {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.95rem;
+            min-height: 24px;
+        }
+
+        .success { color: var(--accent-color); }
+        .error { color: #ff4d4d; }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Bize Ulaşın</h1>
+        <form id="contact-form" method="POST" data-netlify="true">
+            <!-- Netlify için gizli input -->
+            <input type="hidden" name="form-name" value="contact-form" />
+
+            <div class="form-group">
+                <label for="eposta">E-posta Adresiniz</label>
+                <input type="email" id="eposta" name="user_email" required autocomplete="email">
+            </div>
+
+            <div class="form-group">
+                <label for="konu">Konu</label>
+                <input type="text" id="konu" name="subject" required>
+            </div>
+
+            <div class="form-group">
+                <label for="mesaj">Mesajınız</label>
+                <textarea id="mesaj" name="message" required></textarea>
+            </div>
+
+            <button type="submit" id="submit-btn">Mesajı Gönder</button>
+        </form>
+        <div id="status"></div>
+    </div>
+
+    <script>
+        const form = document.getElementById('contact-form');
+        const btn = document.getElementById('submit-btn');
+        const statusText = document.getElementById('status');
+
+        form.onsubmit = function (e) {
+            e.preventDefault();
+
+            // UI Güncelleme
+            btn.innerText = "Gönderiliyor...";
+            btn.disabled = true;
+            statusText.innerText = "Lütfen bekleyin...";
+            statusText.className = "";
+
+            // Dinamik Veriler
+            const now = new Date();
+            const dateStr = now.toLocaleDateString('tr-TR') + ' ' + now.toLocaleTimeString('tr-TR');
+            const siteName = window.location.hostname || "Web Sitemiz";
+
+            // EmailJS Parametreleri
+            const templateParams = {
+                from_name: document.getElementById('eposta').value, // İsim kalktığı için e-posta yazdık
+                user_email: document.getElementById('eposta').value,
+                subject: document.getElementById('konu').value,
+                message: document.getElementById('mesaj').value,
+                date: dateStr,
+                site_name: siteName
+            };
+
+            // 1. EmailJS Gönderimi
+            emailjs.send("service_3q51uy7", "template_5tdxe1l", templateParams)
+                .then(function (response) {
+                    console.log('EmailJS Başarılı:', response);
+                    
+                    // 2. Netlify Form Kaydı (Yedekleme için arka planda)
+                    const formData = new FormData(form);
+                    return fetch("/", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                        body: new URLSearchParams(formData).toString()
+                    });
+                })
+                .then(function () {
+                    statusText.innerText = "Mesajınız başarıyla iletildi! ✅";
+                    statusText.className = "success";
+                    form.reset();
+                })
+                .catch(function (error) {
+                    console.error('Hata:', error);
+                    statusText.innerText = "Bir hata oluştu. Lütfen tekrar deneyin.";
+                    statusText.className = "error";
+                })
+                .finally(function () {
+                    btn.innerText = "Mesajı Gönder";
+                    btn.disabled = false;
+                });
+        };
+    </script>
+</body>
+
+</html>

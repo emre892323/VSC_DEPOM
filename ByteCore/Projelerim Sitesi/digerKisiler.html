@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diğer Kişiler</title>
+    <style>
+        body {
+            background-color: #0D1117;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menuKontrol {
+            display: flex;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .dikeyMenu {
+            height: 400px;
+            width: 100px;
+            background-color: rgb(28, 124, 156);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 15px;
+            box-shadow: 0 0 10px 10px black,
+            inset 0 0 80px 5px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        .kisi {
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+            background-color: aquamarine;
+            
+        }
+
+        .kisiResmi {
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+            
+        }
+
+        .kisiResmi:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 4px 5px black,
+            inset 0 0 4px 5px;
+        }
+        .iframe-kapsayici{
+            height: 550px;
+            width: 1200px;
+            border-radius: 25px;
+            
+        }
+        .iframeKontrol{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+      
+    <div class="menuKontrol">
+        <div class="dikeyMenu">
+            <div class="kisi"><a href="https://musaprositesi.netlify.app/" target="iframe-yeniSekme"><img src="resimler/musa.jpg" alt="#" class="kisiResmi" title="musa"></a> </div>
+            <div class="kisi"><a href="gelistiriliyor.html" target="iframe-yeniSekme"><img src="resimler/u_Harfi.jpg" alt="#" class="kisiResmi" title="ibrahim"></a></div>
+            <div class="kisi"><a href="gelistiriliyor.html" target="iframe-yeniSekme"><img src="resimler/i_Harfi.png" alt="#" class="kisiResmi" title="Utku"></a></div>
+            <div class="kisi"><a href="projelerim.html"><img src="resimler/kisiler.png" alt="#" class="kisiResmi"  title="Emre"></a></div>
+
+        </div>
+        <div class="iframeKontrol">
+              <iframe src="https://musaprositesi.netlify.app/" frameborder="1" class="iframe-kapsayici" name="iframe-yeniSekme"></iframe>
+        </div>
+      
+    </div>
+  
+</body>
+
+</html>
